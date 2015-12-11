@@ -73,8 +73,32 @@
                                 </li> 
                             </ul>
                         </li>
-                    </ul>
+                    
 <!--*****************************************END  NOTICIAS -------------------------------------------------------------------->
+<!--***************************************** ENTREVISTAS -------------------------------------------------------------------->
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-user"></i>
+                                <span class="title">Entrevistas</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="new_entrevista.php" class="nav-link ">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Agregar</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="list_entrevista.php" class="nav-link ">
+                                        <i class="icon-users"></i>
+                                        <span class="title">Listado</span>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </li>
+                    </ul>
+<!--*****************************************END  ENTREVISTAS -------------------------------------------------------------------->
                     <!-- END SIDEBAR MENU -->
                     <!-- END SIDEBAR MENU -->
                 </div>
