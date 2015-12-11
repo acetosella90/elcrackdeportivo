@@ -65,12 +65,12 @@
                                         <span class="title">Agregar</span>
                                     </a>
                                 </li>
-                               <!-- <li class="nav-item  ">
+                                <li class="nav-item  ">
                                     <a href="list_noticia.php" class="nav-link ">
                                         <i class="icon-users"></i>
                                         <span class="title">Listado</span>
                                     </a>
-                                </li> -->
+                                </li> 
                             </ul>
                         </li>
                     </ul>

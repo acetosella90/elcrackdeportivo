@@ -1,7 +1,7 @@
 <?php
 include_once('common/header.php');
 include_once('common/theme_color.php');
-$usuarios = $db->getAllUsers();
+$noticias = $db->getAllNoticias();
 
 ?>
                    
@@ -55,7 +55,7 @@ $usuarios = $db->getAllUsers();
                                 <div class="portlet-title">
                                     <div class="caption font-dark">
                                         <i class="icon-settings font-dark"></i>
-                                        <span class="caption-subject bold uppercase"> Listado de usuarios</span>
+                                        <span class="caption-subject bold uppercase"> Listado de Noticias</span>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
@@ -63,7 +63,7 @@ $usuarios = $db->getAllUsers();
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="btn-group">
-                                                    <a href="new_user.php"><button id="sample_editable_1_new" class="btn sbold green"> Agregar Usuario
+                                                    <a href="new_noticia.php"><button id="sample_editable_1_new" class="btn sbold green"> Agregar Noticia
                                                         <i class="fa fa-plus"></i>
                                                     </button></a>
                                                 </div>
@@ -74,8 +74,11 @@ $usuarios = $db->getAllUsers();
                                         <thead>
                                             <tr>
                                                     
-                                                <th> Username </th>
-                                                <th> Administrador </th>
+                                                <th> Titulo </th>
+                                                <th> Descripción </th>
+                                                <th> Link </th>
+                                                <th> ¿Destacada? </th>
+                                                <th> Imagen </th>
                                                 <th> Editar </th>
                                                 <th> Eliminar </th>
                                             </tr>
@@ -83,13 +86,16 @@ $usuarios = $db->getAllUsers();
                                         <tbody>
 
                                             <?php 
-                                            while ($row = mysql_fetch_assoc($usuarios)) {
-                                                $adm = ($row['superusuario'] == '1') ? "SI" : "NO";
+                                            while ($row = mysql_fetch_assoc($noticias)) {
+                                                $adm = ($row['destacada'] == '1') ? "SI" : "NO";
                                                 echo "<tr class='odd gradeX'>";
-                                                echo "<td>".$row['username']."</td>";
+                                                echo "<td>".$row['titulo']."</td>";
+                                                echo "<td>".$row['descripcion']."</td>";
+                                                echo "<td>".$row['link']."</td>";
                                                 echo "<td>".$adm."</td>";
-                                                echo "<td><a href='edit_user.php?id=".$row['id']."'><span class='label label-sm label-success'> Editar </span></a></td>";
-                                                echo "<td><a href='delete_user.php?id=".$row['id']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";
+                                                echo "<td><img height='50' src='img/".$row['imagen']."'></td>";
+                                                echo "<td><a href='edit_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-success'> Editar </span></a></td>";
+                                                echo "<td><a href='delete_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";
                                             } ?>
                                         </tbody>
                                     </table>

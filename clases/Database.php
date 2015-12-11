@@ -80,4 +80,24 @@ class Database {
         return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen));
     }
 
+    public function getAllNoticias() {
+        $query = new Query();
+        return $this->query($query->getAllNoticias());
+    }
+
+    public function deleteNoticia($id) {
+        $query = new Query();
+        $this->query($query->deleteNoticia($id));
+    }
+
+    public function getNoticiaById($idNoticia) {
+        $query = new Query();
+        return $this->query($query->getNoticiaById($idNoticia));
+    }
+    
+      public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
+        $query = new Query();
+        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id));
+    }
+
 }

@@ -48,4 +48,26 @@ class Query {
         return $result;
     }
 
+    public function getAllNoticias() {
+        $result = "SELECT * FROM noticias;";
+        return $result;
+    }
+
+    public function deleteNoticia($id) {
+        
+        $result = "DELETE FROM noticias WHERE id_noticia ='$id';";
+
+        return $result;
+    }
+    
+     public function getNoticiaById($id) {
+        $result = "SELECT * FROM noticias where id_noticia = '$id';";
+        return $result;
+    }
+    
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
+        $result = "UPDATE noticias SET titulo='$titulo', link='$link',descripcion='$descripcion', destacada='$destacada', imagen='$imagen' WHERE id_noticia='$id';";
+        return $result;
+    }
+
 }
