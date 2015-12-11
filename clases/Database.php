@@ -9,7 +9,7 @@ class Database {
         $this->host        = "localhost";
         $this->username    = "root";
         $this->password    = "1682951";
-        $this->database    = "cobralocom";
+        $this->database    = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)
             OR die("There was a problem connecting to the database.");
