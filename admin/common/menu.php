@@ -51,7 +51,30 @@
                         <?php   
                             }
                         ?>
+<!--***************************************** NOTICIAS -------------------------------------------------------------------->
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="icon-user"></i>
+                                <span class="title">Noticias</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="new_noticia.php" class="nav-link ">
+                                        <i class="icon-user"></i>
+                                        <span class="title">Agregar</span>
+                                    </a>
+                                </li>
+                               <!-- <li class="nav-item  ">
+                                    <a href="list_noticia.php" class="nav-link ">
+                                        <i class="icon-users"></i>
+                                        <span class="title">Listado</span>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </li>
                     </ul>
+<!--*****************************************END  NOTICIAS -------------------------------------------------------------------->
                     <!-- END SIDEBAR MENU -->
                     <!-- END SIDEBAR MENU -->
                 </div>
