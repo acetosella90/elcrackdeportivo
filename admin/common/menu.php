@@ -54,7 +54,7 @@
 <!--***************************************** NOTICIAS -------------------------------------------------------------------->
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-user"></i>
+                                <i class="icon-book-open"></i>
                                 <span class="title">Noticias</span>
                                 <span class="arrow"></span>
                             </a>
@@ -78,7 +78,7 @@
 <!--***************************************** ENTREVISTAS -------------------------------------------------------------------->
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-user"></i>
+                                <i class="icon-info"></i>
                                 <span class="title">Entrevistas</span>
                                 <span class="arrow"></span>
                             </a>
