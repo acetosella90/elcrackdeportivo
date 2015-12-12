@@ -6071,15 +6071,11 @@ button.close {
 }
 
 .clubes{
-  height: 40px;
   background-color: white;
   margin-left: 70px;
 }
 
-.menuBanner{
-  height:390px;
-  background-color:grey;
-}
+
 
 .maxHeight{
   height: 100%;
@@ -6194,4 +6190,14 @@ button.close {
 .noticiasFotos{
     margin-left: -10px;
     padding-top: 5px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+
+.itemNoticia{
+  height: 100%;
 }
