@@ -6067,12 +6067,13 @@ button.close {
 
 .menu{
   height: 40px;
-  background-color: yellow;
+  background-color: #E4CD27;
 }
 
 .clubes{
   height: 40px;
   background-color: white;
+  margin-left: 70px;
 }
 
 .menuBanner{
@@ -6093,7 +6094,7 @@ button.close {
 
 .noticiaBanner{
   height:130px;
-  background-color:#000000;
+  background-color:white;
 }
 
 
@@ -6104,7 +6105,6 @@ button.close {
 
 
 .principal{
-  //height: 2180px;
   background-color:#300002;
 }
 
