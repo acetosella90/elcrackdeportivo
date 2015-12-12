@@ -6070,9 +6070,9 @@ button.close {
   background-color: yellow;
 }
 
-.clues{
+.clubes{
   height: 40px;
-  background-color: green;
+  background-color: white;
 }
 
 .menuBanner{
@@ -6104,7 +6104,7 @@ button.close {
 
 
 .principal{
-  height: 2180px;
+  //height: 2180px;
   background-color:#300002;
 }
 
