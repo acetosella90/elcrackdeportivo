@@ -54,13 +54,17 @@ class Query {
     }
 
     public function deleteNoticia($id) {
-        
         $result = "DELETE FROM noticias WHERE id_noticia ='$id';";
+        return $result;
+    }
 
+
+    public function deleteEntrevista($id) {
+        $result = "DELETE FROM entrevistas WHERE id ='$id';";
         return $result;
     }
     
-     public function getNoticiaById($id) {
+    public function getNoticiaById($id) {
         $result = "SELECT * FROM noticias where id_noticia = '$id';";
         return $result;
     }
@@ -70,4 +74,24 @@ class Query {
         return $result;
     }
 
+    public function addEntrevista($titulo, $link, $descripcion){
+        $result = "INSERT INTO entrevistas(titulo,link,descripcion) VALUES ('$titulo','$link','$descripcion');";
+        return $result;
+    }
+
+
+    public function getAllEntrevistas() {
+        $result = "SELECT * FROM entrevistas;";
+        return $result;
+    }
+
+    public function getEntrevistaById($id){
+        $result = "SELECT * FROM entrevistas where id = '$id';";
+        return $result;
+    }
+
+    public function updateEntrevista($titulo, $link, $descripcion,$id){
+        $result = "UPDATE entrevistas SET titulo='$titulo', link='$link',descripcion='$descripcion' WHERE id='$id';";
+        return $result; 
+    }
 }
