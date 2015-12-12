@@ -6191,3 +6191,7 @@ button.close {
   margin-bottom: 10px;
 }
 
+.noticiasFotos{
+    margin-left: -10px;
+    padding-top: 5px;
+}
