@@ -8,7 +8,7 @@ class Database {
     public function __construct() {
         $this->host = "localhost";
         $this->username = "root";
-        $this->password = "";
+        $this->password = "1682951";
         $this->database = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)
@@ -95,9 +95,36 @@ class Database {
         return $this->query($query->getNoticiaById($idNoticia));
     }
     
-      public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
         $query = new Query();
         $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id));
+    }
+
+
+    public function addEntrevista($titulo, $link, $descripcion){
+        $query = new Query();
+        $this->query($query->addEntrevista($titulo, $link, $descripcion));
+    }
+
+    public function getAllEntrevistas(){
+        $query = new Query();
+        return $this->query($query->getAllEntrevistas());
+    }
+
+    public function deleteEntrevista($id){
+        $query = new Query();
+        $this->query($query->deleteEntrevista($id));
+    }
+
+    public function getEntrevistaById($id){
+        $query = new Query();
+        return $this->query($query->getEntrevistaById($id));
+    }
+
+    public function updateEntrevista($titulo, $link, $descripcion,$id){
+        $query = new Query();
+        
+        $this->query($query->updateEntrevista($titulo, $link, $descripcion,$id));
     }
 
 }

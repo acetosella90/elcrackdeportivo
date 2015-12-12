@@ -1,11 +1,9 @@
 <?php
 include_once('common/header.php');
 include_once('common/theme_color.php');
-$noticias = $db->getAllNoticias();
+$entrevistas = $db->getAllEntrevistas();
 
-?>
-                   
-                
+?>              
                     <!-- BEGIN PAGE BAR -->
                     <div class="page-bar">
                         <ul class="page-breadcrumb">
@@ -21,32 +19,7 @@ $noticias = $db->getAllNoticias();
                                 <span>Datatables</span>
                             </li>
                         </ul>
-                        <div class="page-toolbar">
-                            <div class="btn-group pull-right">
-                                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right" role="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-bell"></i> Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-shield"></i> Another action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-user"></i> Something else here</a>
-                                    </li>
-                                    <li class="divider"> </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-bag"></i> Separated link</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -55,7 +28,7 @@ $noticias = $db->getAllNoticias();
                                 <div class="portlet-title">
                                     <div class="caption font-dark">
                                         <i class="icon-settings font-dark"></i>
-                                        <span class="caption-subject bold uppercase"> Listado de Noticias</span>
+                                        <span class="caption-subject bold uppercase"> Listado de Entrevistas</span>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
@@ -63,7 +36,7 @@ $noticias = $db->getAllNoticias();
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="btn-group">
-                                                    <a href="new_noticia.php"><button id="sample_editable_1_new" class="btn sbold green"> Agregar Noticia
+                                                    <a href="new_entrevista.php"><button id="sample_editable_1_new" class="btn sbold green"> Agregar Entrevista
                                                         <i class="fa fa-plus"></i>
                                                     </button></a>
                                                 </div>
@@ -77,8 +50,6 @@ $noticias = $db->getAllNoticias();
                                                 <th> Titulo </th>
                                                 <th> Descripción </th>
                                                 <th> Link </th>
-                                                <th> ¿Destacada? </th>
-                                                <th> Imagen </th>
                                                 <th> Editar </th>
                                                 <th> Eliminar </th>
                                             </tr>
@@ -86,16 +57,13 @@ $noticias = $db->getAllNoticias();
                                         <tbody>
 
                                             <?php 
-                                            while ($row = mysql_fetch_assoc($noticias)) {
-                                                $adm = ($row['destacada'] == '1') ? "SI" : "NO";
+                                            while ($row = mysql_fetch_assoc($entrevistas)) {
                                                 echo "<tr class='odd gradeX'>";
                                                 echo "<td>".$row['titulo']."</td>";
                                                 echo "<td>".$row['descripcion']."</td>";
                                                 echo "<td>".$row['link']."</td>";
-                                                echo "<td>".$adm."</td>";
-                                                echo "<td><img height='50' src='img/".$row['imagen']."'></td>";
-                                                echo "<td><a href='edit_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-success'> Editar </span></a></td>";
-                                                echo "<td><a href='delete_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";
+                                                echo "<td><a href='edit_entrevista.php?id=".$row['id']."'><span class='label label-sm label-success'> Editar </span></a></td>";
+                                                echo "<td><a href='delete_entrevista.php?id=".$row['id']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";
                                             } ?>
                                         </tbody>
                                     </table>
