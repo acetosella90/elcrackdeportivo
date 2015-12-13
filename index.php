@@ -1,7 +1,8 @@
 <?php
 require_once 'clases/Mobile_Detect.php';
+require_once 'clases/Noticia.php';
 $detect = new Mobile_Detect;
-    $isMobile = $detect->isMobile();
+$isMobile = $detect->isMobile();
 ?>
 
 <!DOCTYPE html>
