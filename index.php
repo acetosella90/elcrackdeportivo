@@ -48,7 +48,8 @@ $isMobile = $detect->isMobile();
 
         <div class="row">
             <div class="col-lg-12 header">
-                <img src="admin/img/logo_elcrack.png">
+                <div style="float:left"><img src="admin/img/logo_elcrack.png"></div>
+                <div style="float:left" >RADIO</div>
                 <div class="navbar-text pull-right">
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
@@ -61,6 +62,7 @@ $isMobile = $detect->isMobile();
 
                         echo "<div style='color:white'>" . $dias[date('w')] . " " . date('d') . " de " . $meses[date('n') - 1] . ", " . date('Y') . "</div>";
                         ?>
+                        <hr>
                     </div>
                 </div>
             </div>  
@@ -191,17 +193,35 @@ $isMobile = $detect->isMobile();
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="container">
+                               <div class="container" style="height:100%; max-height:200px;">
+                                    <?php
+                                    if ($isMobile) {
+                                        echo "<img src='fotos prueba/futbol2.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                    } else {
+                                        echo "<img src='fotos prueba/futbol2.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                    }
+                                    ?>
+
                                     <div class="carousel-caption">
-                                        <h1>Another example headline.</h1>
+                                        <h1>Example headline.</h1>
+
 
                                     </div>
                                 </div>
                             </div>
                             <div class="item">
-                                <div class="container">
+                                <div class="container" style="height:100%; max-height:200px;">
+                                    <?php
+                                    if ($isMobile) {
+                                        echo "<img src='fotos prueba/futbol.jpeg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                    } else {
+                                        echo "<img src='fotos prueba/futbol.jpeg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                    }
+                                    ?>
+
                                     <div class="carousel-caption">
-                                        <h1>One more for good measure.</h1>
+                                        <h1>Example headline.</h1>
+
 
                                     </div>
                                 </div>
