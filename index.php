@@ -5,7 +5,7 @@ $isMobile = $detect->isMobile();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,69 +29,91 @@ $isMobile = $detect->isMobile();
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <link href="css/carousel.css" rel="stylesheet">
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=902318613167663";
-        fjs.parentNode.insertBefore(js, fjs);
+    <div id="fb-root"></div>
+    <script>(function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id))
+                return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=902318613167663";
+            fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
-    </head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
 
-    <body>
+<body>
 
-        <div class="container">
+    <div class="container">
 
-            <div class="row">
-                <div class="col-lg-12 header">
-                    <img src="admin/img/logo_elcrack.png">
+        <div class="row">
+            <div class="col-lg-12 header">
+                <img src="admin/img/logo_elcrack.png">
+                <div class="navbar-text pull-right">
+                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-youtube fa-2x"></i></a>
+                  
+                    <hr>
+                    <div>
+                            <?php
+                            $dias = array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado");
+                            $meses = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
+
+                            echo "<div style='color:white'>" . $dias[date('w')] . " " . date('d') . " de " . $meses[date('n') - 1] . ", " . date('Y') . "</div>";
+                            ?>
+
+
+                        </div>
+                    </div>
+
+
                 </div>  
             </div>
-            
-                
-                <div class="row">
-                    <nav class="navbar navbar-default">
-                            <div class="container-fluid">
-                              <div class="navbar-header">
-                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                                  <span class="sr-only">Toggle navigation</span>
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                                  <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="#">Project name</a>
-                              </div>
-                              <div id="navbar" class="navbar-collapse collapse">
-                                <ul class="nav navbar-nav">
-                                  <li class="active"><a href="#">Home</a></li>
-                                  <li><a href="#">About</a></li>
-                                  <li><a href="#">Contact</a></li>
-                                  <li class="dropdown">
+
+
+            <div class="row">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" href="#">Project name</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="#">Home</a></li>
+                                <li><a href="#">About</a></li>
+                                <li><a href="#">Contact</a></li>
+                                <li class="dropdown">
                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                                     <ul class="dropdown-menu">
-                                      <li><a href="#">Action</a></li>
-                                      <li><a href="#">Another action</a></li>
-                                      <li><a href="#">Something else here</a></li>
-                                      <li role="separator" class="divider"></li>
-                                      <li class="dropdown-header">Nav header</li>
-                                      <li><a href="#">Separated link</a></li>
-                                      <li><a href="#">One more separated link</a></li>
+                                        <li><a href="#">Action</a></li>
+                                        <li><a href="#">Another action</a></li>
+                                        <li><a href="#">Something else here</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Nav header</li>
+                                        <li><a href="#">Separated link</a></li>
+                                        <li><a href="#">One more separated link</a></li>
                                     </ul>
-                                  </li>
-                                </ul>
-                                <ul class="nav navbar-nav navbar-right">
-                                  <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                                  <li><a href="../navbar-static-top/">Static top</a></li>
-                                  <li><a href="../navbar-fixed-top/">Fixed top</a></li>
-                                </ul>
-                              </div><!--/.nav-collapse -->
-                            </div><!--/.container-fluid -->
-                          </nav>
-                          </div>
-                
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../navbar-static-top/">Static top</a></li>
+                                <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </nav>
+            </div>
 
-            
+
+
             <div class="row ">
                 <div class="col-lg-12 clubes text-center">
                     <div><p><a href="/category/Aldosivi"><br>
@@ -104,7 +126,11 @@ $isMobile = $detect->isMobile();
             <div class="row menuBanner">
                 <div class="col-lg-7 maxHeight">
                     <div class="row">
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel"  <?php if($isMobile){ echo "style='width:100%;'"; } ?> >
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel"  <?php
+                        if ($isMobile) {
+                            echo "style='width:100%;'";
+                        }
+                        ?> >
                             <!-- Indicators -->
                             <ol class="carousel-indicators">
                                 <li data-target="#myCarousel"  data-slide-to="0" class="active"></li>
@@ -114,14 +140,14 @@ $isMobile = $detect->isMobile();
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
                                     <div class="container" style="height:100%; max-height:200px;">
-                                    <?php
-                                      if($isMobile){
-                                        echo "<img src='fotos prueba/prueba1.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
-                                      }else{
-                                        echo "<img src='fotos prueba/prueba1.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
-                                      }
-                                    ?>
-                                        
+                                        <?php
+                                        if ($isMobile) {
+                                            echo "<img src='fotos prueba/prueba1.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        } else {
+                                            echo "<img src='fotos prueba/prueba1.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        }
+                                        ?>
+
                                         <div class="carousel-caption">
                                             <h1>Example headline.</h1>
 
@@ -224,9 +250,9 @@ $isMobile = $detect->isMobile();
 
                         <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
                         <div class="row">
-                          <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                              <img src="fotos prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
-                          </div>
+                            <div class="col-lg-4 princialPublicidad" style="background-color:white;">
+                                <img src="fotos prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
+                            </div>
                         </div>
                     </div>
                     <div class="row">
@@ -273,7 +299,7 @@ $isMobile = $detect->isMobile();
                         <div class="col-lg-4 princialPublicidad" style="background-color:white;">
                             <img src="fotos prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
                         </div>
-                        
+
                     </div>
                     <div class="row">
                         <div class="col-lg-12 entrevistaPrincipal"></div>
@@ -323,14 +349,22 @@ $isMobile = $detect->isMobile();
                     <div class="col-lg-12 radio"></div>
                     <div class="col-lg-12 posiciones hidden"></div>
                     <div class="col-lg-12 imagen1SideBar">
-                      <img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%">
+                        <img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%">
                     </div>
                     <div class="col-lg-12 imagen1SideBar">
-                      <a class="twitter-timeline"  href="https://twitter.com/OrbitDesarrollo" data-widget-id="675907943297105921">Tweets por el @OrbitDesarrollo.</a>
-                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                        <a class="twitter-timeline"  href="https://twitter.com/OrbitDesarrollo" data-widget-id="675907943297105921">Tweets por el @OrbitDesarrollo.</a>
+                        <script>!function (d, s, id) {
+                                var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                                if (!d.getElementById(id)) {
+                                    js = d.createElement(s);
+                                    js.id = id;
+                                    js.src = p + "://platform.twitter.com/widgets.js";
+                                    fjs.parentNode.insertBefore(js, fjs);
+                                }
+                            }(document, "script", "twitter-wjs");</script>
                     </div>
                     <div class="col-lg-12 imagen1SideBar">
-                      <div class="fb-page" data-href="https://www.facebook.com/Orbit-1035903329793773/" data-width="362" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Orbit-1035903329793773/"><a href="https://www.facebook.com/Orbit-1035903329793773/">Orbit</a></blockquote></div></div></div>
+                        <div class="fb-page" data-href="https://www.facebook.com/Orbit-1035903329793773/" data-width="362" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Orbit-1035903329793773/"><a href="https://www.facebook.com/Orbit-1035903329793773/">Orbit</a></blockquote></div></div></div>
                     <div class="col-lg-12 imagen2SideBar"><img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%"></div>
                 </div>
             </div>
@@ -364,5 +398,5 @@ $isMobile = $detect->isMobile();
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="js/vendor/holder.min.js"></script>
-    </body>
+</body>
 </html>
