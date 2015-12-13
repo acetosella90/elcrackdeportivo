@@ -3301,6 +3301,7 @@ tbody.collapse.in {
   outline: 0; }
 
 .dropdown-menu {
+    
   position: absolute;
   top: 100%;
   left: 0/*rtl:auto*/;
@@ -3335,7 +3336,7 @@ tbody.collapse.in {
     clear: both;
     font-weight: normal;
     line-height: 1.42857;
-    color: #34495e;
+    color: white;
     white-space: nowrap; }
 
 .dropdown-menu > li > a:hover,
@@ -4119,7 +4120,7 @@ tbody.collapse.in {
   .navbar-default .navbar-text {
     color: #777; }
   .navbar-default .navbar-nav > li > a {
-    color: #777; }
+    color: white; }
     .navbar-default .navbar-nav > li > a:hover,
     .navbar-default .navbar-nav > li > a:focus {
       color: #333;
@@ -4132,13 +4133,13 @@ tbody.collapse.in {
   .navbar-default .navbar-nav > .disabled > a,
   .navbar-default .navbar-nav > .disabled > a:hover,
   .navbar-default .navbar-nav > .disabled > a:focus {
-    color: #ccc;
+    color: white;
     background-color: transparent; }
   .navbar-default .navbar-toggle {
-    border-color: #ddd; }
+    border-color: #CEBA20; }
     .navbar-default .navbar-toggle:hover,
     .navbar-default .navbar-toggle:focus {
-      background-color: #ddd; }
+      background-color: #CEBA20; }
     .navbar-default .navbar-toggle .icon-bar {
       background-color: #888; }
   .navbar-default .navbar-collapse,
@@ -4148,7 +4149,7 @@ tbody.collapse.in {
   .navbar-default .navbar-nav > .open > a:hover,
   .navbar-default .navbar-nav > .open > a:focus {
     background-color: #E4CD27;
-    color: #555; }
+    color: white; }
   @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
       color: #777; }
