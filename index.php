@@ -1,6 +1,5 @@
 <?php
 require_once 'clases/Mobile_Detect.php';
-require_once 'clases/Noticia.php';
 $detect = new Mobile_Detect;
 $isMobile = $detect->isMobile();
 ?>
@@ -30,6 +29,14 @@ $isMobile = $detect->isMobile();
           <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         <![endif]-->
         <link href="css/carousel.css" rel="stylesheet">
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.5&appId=902318613167663";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
     </head>
 
     <body>
@@ -164,7 +171,7 @@ $isMobile = $detect->isMobile();
                     </div>
                 </div>  
             </div>
-            <div class="row">
+            <div class="row hidden">
                 <div class="col-lg-12 resultados">
 
                 </div>  
@@ -183,7 +190,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo1</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -195,7 +202,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo2</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -207,7 +214,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo3</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -228,7 +235,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo1</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -240,7 +247,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo2</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -252,7 +259,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo3</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -277,7 +284,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo1</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -289,7 +296,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo2</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -301,7 +308,7 @@ $isMobile = $detect->isMobile();
                                 <h4><strong>Titulo3</strong></h4>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
                                     Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                    Sed fermentum egestas risus quis pulvinar. Donec mattis fermentum aliquam.</p>
+                                    Sed fermentum egestas risus quis pulvinar.  .</p>
                             </div>
 
                         </div>
@@ -311,11 +318,17 @@ $isMobile = $detect->isMobile();
 
                 <div class="col-lg-3 sideBar">
                     <div class="col-lg-12 radio"></div>
-                    <div class="col-lg-12 posiciones"></div>
-                    <div class="col-lg-12 imagen1SideBar"></div>
-                    <div class="col-lg-12 imagen1SideBar"></div>
-                    <div class="col-lg-12 imagen1SideBar"></div>
-                    <div class="col-lg-12 imagen2SideBar"></div>
+                    <div class="col-lg-12 posiciones hidden"></div>
+                    <div class="col-lg-12 imagen1SideBar">
+                      <img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%">
+                    </div>
+                    <div class="col-lg-12 imagen1SideBar">
+                      <a class="twitter-timeline"  href="https://twitter.com/OrbitDesarrollo" data-widget-id="675907943297105921">Tweets por el @OrbitDesarrollo.</a>
+                      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                    </div>
+                    <div class="col-lg-12 imagen1SideBar">
+                      <div class="fb-page" data-href="https://www.facebook.com/Orbit-1035903329793773/" data-width="362" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Orbit-1035903329793773/"><a href="https://www.facebook.com/Orbit-1035903329793773/">Orbit</a></blockquote></div></div></div>
+                    <div class="col-lg-12 imagen2SideBar"><img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%"></div>
                 </div>
             </div>
             <div class="row">

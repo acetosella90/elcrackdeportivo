@@ -6097,12 +6097,6 @@ button.close {
 
 .sideBar{
   height: 2180px;
-  background-color:#7D79D2;
-}
-
-
-.principal{
-  background-color:#300002;
 }
 
 .noticiaPrincipal{
@@ -6160,30 +6154,13 @@ button.close {
 }
 
 .imagen1SideBar{
-  height: 300px;
-  background-color: lightgreen;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-
-.imagen1SideBar{
-  height: 300px;
-  background-color: lightgreen;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-.imagen1SideBar{
   height: 340px;
-  background-color: lightgreen;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
 .imagen2SideBar{
   height: 440px;
-  background-color: lightgreen;
   margin-top: 10px;
   margin-bottom: 10px;
 }
