@@ -80,7 +80,7 @@ License: You must have a valid license purchased only from themeforest(the above
         <!-- BEGIN LOGO -->
         <div class="logo">
             <a href="index.html">
-                <img src="../assets/pages/img/logo-big.png" alt="" /> </a>
+                <img src="img/logo_elcrack.png" alt="" /> </a>
         </div>
         <!-- END LOGO -->
         <!-- BEGIN LOGIN -->
@@ -115,7 +115,7 @@ License: You must have a valid license purchased only from themeforest(the above
             </form>
             <!-- END LOGIN FORM -->
         </div>
-        <div class="copyright"> 2015 © Cobralo. </div>
+        <div class="copyright"> 2015 © Orbit. </div>
         <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
 <script src="../assets/global/plugins/excanvas.min.js"></script> 

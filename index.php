@@ -221,9 +221,12 @@ $isMobile = $detect->isMobile();
 
                     </div>
                     <div class="row">
+
                         <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
-                        <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                            <img src="fotos prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%'/>
+                        <div class="row">
+                          <div class="col-lg-4 princialPublicidad" style="background-color:white;">
+                              <img src="fotos prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
+                          </div>
                         </div>
                     </div>
                     <div class="row">
@@ -268,7 +271,7 @@ $isMobile = $detect->isMobile();
                     <div class="row">
                         <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
                         <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                            <img src="fotos prueba/garba.jpg" alt="publicidad" height="200" width="315"/>
+                            <img src="fotos prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
                         </div>
                         
                     </div>
