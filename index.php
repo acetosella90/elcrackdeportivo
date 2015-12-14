@@ -272,14 +272,38 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
             </div>  
             <div class="col-lg-5 maxHeight">
                 <div class="row">
-                    <div class="col-lg-12 noticiaBanner" style="background-color:black;">
-
+                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                        <div class="col-lg-4" >
+                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                        </div>
+                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                            <p style="display: table-cell; vertical-align: middle;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-lg-12 noticiaBanner" style="background-color:#0000FF;">
-
+                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                        <div class="col-lg-4" >
+                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                        </div>
+                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                            <p style="display: table-cell; vertical-align: middle;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-lg-12 noticiaBanner" style="background-color:#F00FFF;">
-
+                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                        <div class="col-lg-4" >
+                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                        </div>
+                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                            <p style="display: table-cell; vertical-align: middle;">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                            </p>
+                        </div>
                     </div>  
                 </div>
             </div>  
@@ -334,8 +358,29 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
 
                 </div>
                 <div class="row">
-
-                    <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
+                    <div class="col-lg-8 noticiaSecundaria">
+                        <div class="col-lg-12" style="height:50%;">
+                            <div class="col-lg-4 offset1" style="height:100%">
+                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" style="height:50%;">
+                            <div class="col-lg-4" style=" height:100%">
+                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                            </div>
+                            <div class="col-lg-8" style=";height:100%; display: table; overflow: hidden;">
+                            <p style="display: table-cell; vertical-align: middle;">
+                                Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-4 princialPublicidad" style="background-color:white;">
                             <img src="fotos_prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
@@ -382,7 +427,30 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
 
                 </div>
                 <div class="row">
-                    <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
+                    <div class="col-lg-8 noticiaSecundaria">
+                        <div class="col-lg-12" style="height:50%;">
+                            <div class="col-lg-4 offset1" style="height:100%">
+                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-12" style="height:50%;">
+                            <div class="col-lg-4 offset1" style="height:100%">
+                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="col-lg-4 princialPublicidad" style="background-color:white;">
                         <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
                     </div>

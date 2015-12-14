@@ -6090,7 +6090,7 @@ button.close {
 }
 
 .noticiaBanner{
-  height:130px;
+
   background-color:white;
 }
 
@@ -6104,6 +6104,7 @@ button.close {
 }
 
 .noticiaSecundaria{
+  padding-top: 5px;
   height: 350px;
 }
 
@@ -6178,4 +6179,11 @@ button.close {
 
 .itemNoticia{
   height: 100%;
+}
+
+.redondo{
+  border-radius: 172px 172px 172px 172px;
+-moz-border-radius: 172px 172px 172px 172px;
+-webkit-border-radius: 172px 172px 172px 172px;
+border: 0px solid #000000;
 }
