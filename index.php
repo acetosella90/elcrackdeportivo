@@ -84,9 +84,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 <div class="col-lg-3">
                 </div>
                 <div class="col-lg-3" style="margin-top:10px;">
-                    <a style="margin-left: 10px; color:white" onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-youtube fa-2x"></i></a>
+                    <a style="margin-left: 10px; color:white" onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-youtube fa-2x"></i></a>
                     <hr>
                     <div <?php if ($isMobile) echo "style='font-size: 12px;'"; ?>>
                         <?php
@@ -121,38 +121,28 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                     <li><a href="#">PRIMERA DIVISIÓN</a></li>
                                     <li><a href="#">NACIONAL B</a></li>
                                     <li><a href="#">FÚTBOL DE ASCENSO</a></li>
-                                    <li><a href="#">SELECCIÓN ARGENTINA</a></li>
-                                    <li><a href="#">LIONEL MESSI</a></li>
+                                    <li><a href="#">ELIMINATORIAS</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNACIONAL <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">LIGA ESPAÑOLA</a></li>
-                                    <li><a href="#">LIGA INGLESA</a></li>
-                                    <li><a href="#">LIGA ITALIANA</a></li>
-                                    <li><a href="#">OTRAS LIGAS</a></li>
-                                </ul>
+                                <a href="#" >INTERNACIONAL <span></span></a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COPAS <span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">COPA ARGENTINA</a></li>
-                                    <li><a href="#">UEFA CHAMPIONS LEAGUE</a></li>
-                                    <li><a href="#">EUROPA LEAGUE</a></li>
+                                    <li><a href="#">CHAMPIONS LEAGUE</a></li>
+                                    <li><a href="#">COPA LIBERTADORES</a></li>
+                                    <li><a href="#">COPA SUDAMERICANA</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
+                                <a href="#" >SELECCIÓN ARGENTINA <span ></span></a>
+                            </li>
+                              <li class="dropdown">
+                                <a href="#" >MESSI VS CRISTINANO <span></span></a>
+                            </li>
+                            <li class="dropdown">
                                 <a href="#" >TENIS <span ></span></a>
-
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" >AUTOMOVILISMO <span ></span></a>
-
-                            </li>
-                            <li class="dropdown">
-                                <a href="#" >BOXEO <span></span></a>
-
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POLIDEPORTIVO <span class="caret"></span></a>
@@ -164,10 +154,13 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" >STAFF <span ></span></a>
-                              
+                                <a href="#" >VER PARA CREER <span ></span></a>
                             </li>
+                             <li style='margin-left: 70px;'  class="dropdown bg-lineas-diagonales">
+                                 <a> <div class='entrevista-menu' ><strong>ENTREVISTAS</strong></div></a>
+                             </li>
                         </ul>
+                       
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
