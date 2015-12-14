@@ -138,7 +138,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             <li class="dropdown">
                                 <a href="#" >SELECCIÓN ARGENTINA <span ></span></a>
                             </li>
-                              <li class="dropdown">
+                            <li class="dropdown">
                                 <a href="#" >MESSI VS CRISTINANO <span></span></a>
                             </li>
                             <li class="dropdown">
@@ -156,11 +156,11 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             <li class="dropdown">
                                 <a href="#" >VER PARA CREER <span ></span></a>
                             </li>
-                             <li style='margin-left: 70px;'  class="dropdown bg-lineas-diagonales">
-                                 <a> <div class='entrevista-menu' ><strong>ENTREVISTAS</strong></div></a>
-                             </li>
+                            <li style='margin-left: 70px;'  class="dropdown bg-lineas-diagonales">
+                                <a> <div class='entrevista-menu' ><strong>ENTREVISTAS</strong></div></a>
+                            </li>
                         </ul>
-                       
+
                     </div><!--/.nav-collapse -->
                 </div><!--/.container-fluid -->
             </nav>
@@ -346,9 +346,11 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+
                                 <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong>Titulo</strong></h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
@@ -358,8 +360,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style=";height:100%; display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
+                                <h4><strong>Titulo</strong></h4>
+                                Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
                             </div>
                         </div>
                     </div>
@@ -416,8 +419,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong>Titulo</strong></h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
@@ -427,8 +431,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong>Titulo</strong></h4>
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
