@@ -94,4 +94,20 @@ class Query {
         $result = "UPDATE entrevistas SET titulo='$titulo', link='$link',descripcion='$descripcion' WHERE id='$id';";
         return $result; 
     }
+
+    public function getCantUsers(){
+        $result = "SELECT count(*) as cant FROM usuarios;";
+        return $result;
+    }
+
+    public function getCantNoticias(){
+        $result = "SELECT count(*) as cant FROM noticias;";
+        return $result;
+    }
+
+
+    public function getCantEntrevistas(){
+        $result = "SELECT count(*) as cant FROM entrevistas;";
+        return $result;
+    }
 }

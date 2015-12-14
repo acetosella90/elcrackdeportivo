@@ -48,9 +48,9 @@ $isMobile = $detect->isMobile();
 
         <div class="row">
             <div class="col-lg-12 header">
-                <div style="float:left"><img src="admin/img/logo_elcrack.png"></div>
-                <div style="float:left" >RADIO</div>
-                <div class="navbar-text pull-right">
+                <div class="col-lg-3"><img src="admin/img/logo_elcrack.png"></div>
+                <div class="col-lg-6" >RADIO</div>
+                <div class="col-lg-3" style="margin-top:10px;">
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-youtube fa-2x"></i></a>
@@ -179,9 +179,9 @@ $isMobile = $detect->isMobile();
                                 <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos prueba/prueba1.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='fotos_prueba/prueba1.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos prueba/prueba1.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='fotos_prueba/prueba1.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
@@ -196,9 +196,9 @@ $isMobile = $detect->isMobile();
                                <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos prueba/futbol2.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='fotos_prueba/futbol2.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos prueba/futbol2.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='fotos_prueba/futbol2.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
@@ -213,9 +213,9 @@ $isMobile = $detect->isMobile();
                                 <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos prueba/futbol.jpeg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='fotos_prueba/futbol.jpeg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos prueba/futbol.jpeg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='fotos_prueba/futbol.jpeg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
@@ -265,7 +265,7 @@ $isMobile = $detect->isMobile();
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo1</strong></h4>
@@ -277,7 +277,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo2</strong></h4>
@@ -289,7 +289,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo3</strong></h4>
@@ -306,14 +306,14 @@ $isMobile = $detect->isMobile();
                     <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
                     <div class="row">
                         <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                            <img src="fotos prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
+                            <img src="fotos_prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
                         </div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo1</strong></h4>
@@ -325,7 +325,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo2</strong></h4>
@@ -337,7 +337,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo3</strong></h4>
@@ -352,7 +352,7 @@ $isMobile = $detect->isMobile();
                 <div class="row">
                     <div class="col-lg-8 noticiaSecundaria" style="background-color:#200FFF;"></div>
                     <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                        <img src="fotos prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                        <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
                     </div>
 
                 </div>
@@ -362,7 +362,7 @@ $isMobile = $detect->isMobile();
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo1</strong></h4>
@@ -374,7 +374,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo2</strong></h4>
@@ -386,7 +386,7 @@ $isMobile = $detect->isMobile();
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
                             <h4><strong>Titulo3</strong></h4>
@@ -404,7 +404,7 @@ $isMobile = $detect->isMobile();
                 <div class="col-lg-12 radio"></div>
                 <div class="col-lg-12 posiciones hidden"></div>
                 <div class="col-lg-12 imagen1SideBar">
-                    <img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%">
+                    <img src="fotos_prueba/tapa_ole.jpg" style="height:100%; width:100%">
                 </div>
                 <div class="col-lg-12 imagen1SideBar">
                     <a class="twitter-timeline"  href="https://twitter.com/OrbitDesarrollo" data-widget-id="675907943297105921">Tweets por el @OrbitDesarrollo.</a>
@@ -420,7 +420,7 @@ $isMobile = $detect->isMobile();
                 </div>
                 <div class="col-lg-12 imagen1SideBar">
                     <div class="fb-page" data-href="https://www.facebook.com/Orbit-1035903329793773/" data-width="362" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Orbit-1035903329793773/"><a href="https://www.facebook.com/Orbit-1035903329793773/">Orbit</a></blockquote></div></div></div>
-                <div class="col-lg-12 imagen2SideBar"><img src="fotos prueba/tapa_ole.jpg" style="height:100%; width:100%"></div>
+                <div class="col-lg-12 imagen2SideBar"><img src="fotos_prueba/tapa_ole.jpg" style="height:100%; width:100%"></div>
             </div>
         </div>
         <div class="row">

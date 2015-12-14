@@ -6,6 +6,7 @@ if(empty($_SESSION['id'])){
 
 include_once('common/header.php');
 include_once('common/theme_color.php');
+
 ?>
                     <!-- BEGIN PAGE BAR -->
                     <div class="page-bar">
@@ -18,13 +19,7 @@ include_once('common/theme_color.php');
                                 <span>Dashboard</span>
                             </li>
                         </ul>
-                        <div class="page-toolbar">
-                            <div id="dashboard-report-range" class="pull-right tooltips btn btn-sm" data-container="body" data-placement="bottom" data-original-title="Change dashboard date range">
-                                <i class="icon-calendar"></i>&nbsp;
-                                <span class="thin uppercase hidden-xs"></span>&nbsp;
-                                <i class="fa fa-angle-down"></i>
-                            </div>
-                        </div>
+                        
                     </div>
                     <!-- END PAGE BAR -->
                     <!-- BEGIN PAGE TITLE-->
@@ -35,33 +30,46 @@ include_once('common/theme_color.php');
                     <!-- END PAGE HEADER-->
                     <!-- BEGIN DASHBOARD STATS 1-->
                     <div class="row">
+                        <?php
+                            if($db->isUserUser($_SESSION['id'])){
+                        ?>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="dashboard-stat blue">
                                 <div class="visual">
-                                    <i class="fa fa-comments"></i>
+                                    <i class="icon-user"></i>
                                 </div>
                                 <div class="details">
                                     <div class="number">
-                                        <span data-counter="counterup" data-value="1349">0</span>
+                                        <?php
+                                            $cant = mysql_fetch_assoc($db->getCantUsers())['cant'];
+                                        ?>
+                                        <span data-counter="counterup" data-value="<?php echo $cant; ?>">0</span>
                                     </div>
-                                    <div class="desc"> New Feedbacks </div>
+                                    <div class="desc"> Usuarios </div>
                                 </div>
-                                <a class="more" href="javascript:;"> View more
+
+                                <a class="more" href="new_user.php"> Agregar usuario
                                     <i class="m-icon-swapright m-icon-white"></i>
                                 </a>
                             </div>
                         </div>
+                        <?php
+                            }
+                        ?>
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="dashboard-stat red">
                                 <div class="visual">
-                                    <i class="fa fa-bar-chart-o"></i>
+                                    <i class="icon-book-open"></i>
                                 </div>
                                 <div class="details">
                                     <div class="number">
-                                        <span data-counter="counterup" data-value="12,5">0</span>M$ </div>
-                                    <div class="desc"> Total Profit </div>
+                                        <?php
+                                            $cant = mysql_fetch_assoc($db->getCantNoticias())['cant'];
+                                        ?>
+                                        <span data-counter="counterup" data-value="<?php echo $cant; ?>">0</span></div>
+                                    <div class="desc"> Noticias </div>
                                 </div>
-                                <a class="more" href="javascript:;"> View more
+                                <a class="more" href="new_noticia.php"> Agregar Noticia
                                     <i class="m-icon-swapright m-icon-white"></i>
                                 </a>
                             </div>
@@ -69,30 +77,18 @@ include_once('common/theme_color.php');
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="dashboard-stat green">
                                 <div class="visual">
-                                    <i class="fa fa-shopping-cart"></i>
+                                    <i class="icon-info"></i>
                                 </div>
                                 <div class="details">
                                     <div class="number">
-                                        <span data-counter="counterup" data-value="549">0</span>
+                                        <?php
+                                            $cant = mysql_fetch_assoc($db->getCantEntrevistas())['cant'];
+                                        ?>
+                                        <span data-counter="counterup" data-value="<?php echo $cant; ?>">0</span>
                                     </div>
-                                    <div class="desc"> New Orders </div>
+                                    <div class="desc"> Entrevistas </div>
                                 </div>
-                                <a class="more" href="javascript:;"> View more
-                                    <i class="m-icon-swapright m-icon-white"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                            <div class="dashboard-stat purple">
-                                <div class="visual">
-                                    <i class="fa fa-globe"></i>
-                                </div>
-                                <div class="details">
-                                    <div class="number"> +
-                                        <span data-counter="counterup" data-value="89"></span>% </div>
-                                    <div class="desc"> Brand Popularity </div>
-                                </div>
-                                <a class="more" href="javascript:;"> View more
+                                <a class="more" href="new_entrevista.php"> Agregar Entrevista
                                     <i class="m-icon-swapright m-icon-white"></i>
                                 </a>
                             </div>

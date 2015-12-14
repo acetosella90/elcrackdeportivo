@@ -123,8 +123,22 @@ class Database {
 
     public function updateEntrevista($titulo, $link, $descripcion,$id){
         $query = new Query();
-        
         $this->query($query->updateEntrevista($titulo, $link, $descripcion,$id));
+    }
+
+    public function getCantUsers(){
+        $query = new Query();
+        return $this->query($query->getCantUsers());
+    }
+
+    public function getCantNoticias(){
+        $query = new Query();
+        return $this->query($query->getCantNoticias());
+    }
+
+    public function getCantEntrevistas(){
+        $query = new Query();
+        return $this->query($query->getCantEntrevistas());
     }
 
 }
