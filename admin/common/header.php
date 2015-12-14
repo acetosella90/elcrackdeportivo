@@ -55,7 +55,7 @@ License: You must have a valid license purchased only from themeforest(the above
             <div class="page-header-inner ">
                 <div class="page-logo">
                     <a href="dashboard.php">
-                        <img src="img/logo_elcrack.png" alt="logo" class="logo-default" width="50" /> </a>
+                        <img src="../img/logo_elcrack.png" alt="logo" class="logo-default" width="50" /> </a>
                     <div class="menu-toggler sidebar-toggler"> </div>
                 </div>
                 <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse" data-target=".navbar-collapse"> </a>

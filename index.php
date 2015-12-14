@@ -2,6 +2,31 @@
 require_once 'clases/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 $isMobile = $detect->isMobile();
+
+// get all news
+
+require_once 'clases/Database.php';
+require_once 'clases/Query.php';
+require_once 'clases/Noticia.php';
+require_once 'clases/Entrevista.php';
+
+$db = new Database();
+$noticiasSQL = $db->getAllNoticias();
+$noticias = array();
+while ($row = mysql_fetch_array($noticiasSQL)) {
+    $noticia = new Noticia($row['id_noticia'], $row['imagen'], $row['link'], $row['descripcion'], $row['titulo'],$row['destacada']);
+    array_push($noticias, $noticia);
+}
+
+//get all interviews
+
+$entrevistasSQL = $db->getAllEntrevistas();
+$entrevistas = array();
+while ($row = mysql_fetch_array($entrevistasSQL)) {
+    $entrevista = new Entrevista($row['id'], $row['link'], $row['descripcion'], $row['titulo']);
+    array_push($entrevistas, $entrevista);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -48,7 +73,7 @@ $isMobile = $detect->isMobile();
 
         <div class="row">
             <div class="col-lg-12 header">
-                <div class="col-lg-3"><img src="admin/img/logo_elcrack.png"></div>
+                <div class="col-lg-3"><img src="img/logo_elcrack.png"></div>
                 <div class="col-lg-6" >RADIO</div>
                 <div class="col-lg-3" style="margin-top:10px;">
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
@@ -425,7 +450,7 @@ $isMobile = $detect->isMobile();
         </div>
         <div class="row">
             <div class="col-lg-12 vine ">
-
+            <a href=""><img src="img/vine.jpg" style="height:100%;"></a>
             </div>  
         </div>
         <div class="row">

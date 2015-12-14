@@ -110,4 +110,7 @@ class Query {
         $result = "SELECT count(*) as cant FROM entrevistas;";
         return $result;
     }
+
+
+
 }

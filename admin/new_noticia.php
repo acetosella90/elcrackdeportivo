@@ -26,7 +26,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             echo "El tipo de archivo no es de los permitidos";
     } else
         echo "El archivo supera el peso permitido.";
-
     $db->addNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'],$nombre);
     $exito = true;
 }
