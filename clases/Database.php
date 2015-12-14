@@ -8,7 +8,7 @@ class Database {
     public function __construct() {
         $this->host = "localhost";
         $this->username = "root";
-        $this->password = "1682951";
+        $this->password = "";
         $this->database = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)

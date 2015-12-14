@@ -14,7 +14,7 @@ $db = new Database();
 $noticiasSQL = $db->getAllNoticias();
 $noticias = array();
 while ($row = mysql_fetch_array($noticiasSQL)) {
-    $noticia = new Noticia($row['id_noticia'], $row['imagen'], $row['link'], $row['descripcion'], $row['titulo'],$row['destacada']);
+    $noticia = new Noticia($row['id_noticia'], $row['imagen'], $row['link'], $row['descripcion'], $row['titulo'], $row['destacada']);
     array_push($noticias, $noticia);
 }
 
@@ -26,7 +26,6 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
     $entrevista = new Entrevista($row['id'], $row['link'], $row['descripcion'], $row['titulo']);
     array_push($entrevistas, $entrevista);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -70,24 +69,26 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
 <body>
 
     <div class="container">
-<style type="text/css">
-    audio {
-    width: 230px;
-}
-</style>
+        <style type="text/css">
+            audio {
+                width: 230px;
+            }
+        </style>
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-3"><img src="img/logo_elcrack.png"></div>
-                <div class="col-lg-6" >
-
+                <div class="col-lg-3" style="margin-top: 15px;">
+                    <p style="color:white;">Escuchanos en ¡VIVO!</p><hr>
                     <audio controls ><source src="http://angeladon.io/audio.mp3" type="audio/mpeg"></audio>
                 </div>
+                <div class="col-lg-3">
+                </div>
                 <div class="col-lg-3" style="margin-top:10px;">
-                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-youtube fa-2x"></i></a>
+                    <a style="margin-left: 10px; color:white" onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText='color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText='color: white;margin-left: 10px;'" href="#"><i class="fa fa-youtube fa-2x"></i></a>
                     <hr>
-                    <div <?php if($isMobile) echo "style='font-size: 12px;'"; ?>>
+                    <div <?php if ($isMobile) echo "style='font-size: 12px;'"; ?>>
                         <?php
                         $dias = array("Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado");
                         $meses = array("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre");
@@ -117,66 +118,54 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">FÚTBOL <span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">PRIMERA DIVISIÓN</a></li>
+                                    <li><a href="#">NACIONAL B</a></li>
+                                    <li><a href="#">FÚTBOL DE ASCENSO</a></li>
+                                    <li><a href="#">SELECCIÓN ARGENTINA</a></li>
+                                    <li><a href="#">LIONEL MESSI</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">INTERNACIONAL <span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">LIGA ESPAÑOLA</a></li>
+                                    <li><a href="#">LIGA INGLESA</a></li>
+                                    <li><a href="#">LIGA ITALIANA</a></li>
+                                    <li><a href="#">OTRAS LIGAS</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">COPAS <span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">COPA ARGENTINA</a></li>
+                                    <li><a href="#">UEFA CHAMPIONS LEAGUE</a></li>
+                                    <li><a href="#">EUROPA LEAGUE</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">TENIS <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                </ul>
+                                <a href="#" >TENIS <span ></span></a>
+
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">AUTOMOVILISMO <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                </ul>
+                                <a href="#" >AUTOMOVILISMO <span ></span></a>
+
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">BOXEO <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                </ul>
+                                <a href="#" >BOXEO <span></span></a>
+
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">POLIDEPORTIVO <span class="caret"></span></a>
                                 <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
+                                    <li><a href="#">GOLF</a></li>
+                                    <li><a href="#">BÁSQUET</a></li>
+                                    <li><a href="#">ATLETISMO</a></li>
+                                    <li><a href="#">RUGBY</a></li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">STAFF <span class="caret"></span></a>
-                                <ul class="dropdown-menu" style="background: #E4CD27;">
-                                    <li><a href="#">Action</a></li>
-                                    <li><a href="#">Another action</a></li>
-                                    <li><a href="#">Something else here</a></li>
-                                </ul>
+                                <a href="#" >STAFF <span ></span></a>
+                              
                             </li>
                         </ul>
                     </div><!--/.nav-collapse -->
@@ -225,7 +214,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 </div>
                             </div>
                             <div class="item">
-                               <div class="container" style="height:100%; max-height:200px;">
+                                <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
                                         echo "<img src='fotos_prueba/futbol2.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
@@ -272,36 +261,36 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
             </div>  
             <div class="col-lg-5 maxHeight">
                 <div class="row">
-                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                    <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
                             <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
                         </div>
-                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                        <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                             <p style="display: table-cell; vertical-align: middle;">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                    <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
                             <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
                         </div>
-                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                        <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                             <p style="display: table-cell; vertical-align: middle;">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-12 noticiaBanner" <?php if(!$isMobile) echo "style='height:130px;'"; ?>>
+                    <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
                             <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
                         </div>
-                          <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                        <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                             <p style="display: table-cell; vertical-align: middle;">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                             </p>
                         </div>
                     </div>  
@@ -365,8 +354,8 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
@@ -375,9 +364,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
                             </div>
                             <div class="col-lg-8" style=";height:100%; display: table; overflow: hidden;">
-                            <p style="display: table-cell; vertical-align: middle;">
-                                Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
+                                <p style="display: table-cell; vertical-align: middle;">
+                                    Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
                             </div>
                         </div>
                     </div>
@@ -434,8 +423,8 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
@@ -445,8 +434,8 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
                                 </p>
                             </div>
                         </div>
@@ -525,7 +514,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
         </div>
         <div class="row">
             <div class="col-lg-12 vine ">
-            <a href=""><img src="img/vine.jpg" style="height:100%;"></a>
+                <a href=""><img src="img/vine.jpg" style="height:100%;"></a>
             </div>  
         </div>
         <div class="row">
