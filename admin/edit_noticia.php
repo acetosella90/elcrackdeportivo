@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else
         echo "El archivo supera el peso permitido.";
 
-    $db->updateNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'], $nombre, $_POST['id']);
+    $db->updateNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'], $nombre, $_POST['categoria'], $_POST['id']);
     $exito = true;
 }
 ?>
@@ -102,6 +102,25 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <select class="form-control" name="superusuario" id="form_control_1">
                                     <option value="1" <?php if ($datosNoticia['destacada'] == "SI") echo "selected"; ?>>SI</option>
                                     <option value="0" <?php if ($datosNoticia['destacada'] == "NO") echo "selected"; ?> >NO</option>
+                                </select>
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">Categoria</label>
+                            <div class="col-md-5">
+                                <select class="form-control" name="categoria" id="form_control_1">
+                                    <?php
+                                        $categorias=$db->getAllCategorias();
+                                        while($row = mysql_fetch_assoc($categorias)){
+                                            if ($datosNoticia['categoria'] == $row['id']){
+                                                $selected = "selected";
+                                            }else{
+                                                $selected = "";
+                                            } 
+                                            echo "<option ".$selected." value='".$row['id']."'>".$row['titulo']."</option>";
+                                        }
+                                    ?>
                                 </select>
                                 <div class="form-control-focus"> </div>
                             </div>

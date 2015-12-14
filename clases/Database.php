@@ -74,10 +74,10 @@ class Database {
         return $this->query($query->getUserById($idUser));
     }
 
-    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen) {
+    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria) {
 
         $query = new Query();
-        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen));
+        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria));
     }
 
     public function getAllNoticias() {
@@ -95,9 +95,9 @@ class Database {
         return $this->query($query->getNoticiaById($idNoticia));
     }
     
-    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria,$id) {
         $query = new Query();
-        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id));
+        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $id));
     }
 
 
@@ -141,6 +141,9 @@ class Database {
         return $this->query($query->getCantEntrevistas());
     }
 
-
+    public function getAllCategorias(){
+        $query = new Query();
+        return $this->query($query->getAllCategorias());
+    }
 
 }

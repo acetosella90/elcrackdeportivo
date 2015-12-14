@@ -1,6 +1,13 @@
+  <script src="tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
+
 <?php
+            
+
 include_once('common/header.php');
+
 include_once('common/theme_color.php');
+
 $exito = false;
 if (empty($_SESSION['id'])) {
     echo "<script>window.location='../index.php';</script>";
@@ -26,9 +33,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             echo "El tipo de archivo no es de los permitidos";
     } else
         echo "El archivo supera el peso permitido.";
-    $db->addNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'],$nombre);
+    $db->addNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'],$nombre, $_POST['categoria']);
     $exito = true;
 }
+
 ?>
 <!-- BEGIN PAGE BAR -->
 <div class="page-bar">
@@ -57,7 +65,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                     <button class="close" data-close="alert"></button>
                     <span> Noticia agregada correctamente. </span>
                 </div>
-<?php } ?>
+<?php } 
+
+?>
             <div class="portlet-body form">
                 <form role="form" class="form-horizontal" action="new_noticia.php" method="POST" enctype="multipart/form-data">
                     <div class="form-body">
@@ -90,6 +100,21 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                         </div>
 
                         <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">Categoria</label>
+                            <div class="col-md-5">
+                                <select class="form-control" name="categoria" id="form_control_1">
+                                    <?php
+                                        $categorias=$db->getAllCategorias();
+                                        while($row = mysql_fetch_assoc($categorias)){
+                                            echo "<option value='".$row['id']."'>".$row['titulo']."</option>";
+                                        }
+                                    ?>
+                                </select>
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-md-line-input">
                             <label class="col-md-2 control-label" for="form_control_1">Imagen 
                             </label>
                             <div class="col-md-10">
@@ -106,7 +131,6 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>
-
                     </div>
                     <div class="form-actions">
                         <div class="row">

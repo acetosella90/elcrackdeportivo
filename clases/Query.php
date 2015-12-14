@@ -43,8 +43,8 @@ class Query {
         return $result;
     }
 
-    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen) {
-        $result = "INSERT INTO noticias(titulo,link,descripcion,destacada,imagen) VALUES ('$titulo', '$link', '$descripcion', '$destacada', '$imagen' );";
+    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria) {
+        $result = "INSERT INTO noticias(titulo,link,descripcion,destacada,imagen,categoria) VALUES ('$titulo', '$link', '$descripcion', '$destacada', '$imagen' ,'$categoria');";
         return $result;
     }
 
@@ -69,8 +69,8 @@ class Query {
         return $result;
     }
     
-    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $id) {
-        $result = "UPDATE noticias SET titulo='$titulo', link='$link',descripcion='$descripcion', destacada='$destacada', imagen='$imagen' WHERE id_noticia='$id';";
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $id) {
+        $result = "UPDATE noticias SET titulo='$titulo', link='$link',descripcion='$descripcion', destacada='$destacada', categoria='$categoria',imagen='$imagen' WHERE id_noticia='$id';";
         return $result;
     }
 
@@ -111,6 +111,9 @@ class Query {
         return $result;
     }
 
-
+    public function getAllCategorias() {
+        $result = "SELECT * FROM categoria;";
+        return $result;
+    }
 
 }

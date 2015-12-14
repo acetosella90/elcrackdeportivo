@@ -70,11 +70,18 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
 <body>
 
     <div class="container">
-
+<style type="text/css">
+    audio {
+    width: 230px;
+}
+</style>
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-3"><img src="img/logo_elcrack.png"></div>
-                <div class="col-lg-6" >RADIO</div>
+                <div class="col-lg-6" >
+
+                    <audio controls ><source src="http://angeladon.io/audio.mp3" type="audio/mpeg"></audio>
+                </div>
                 <div class="col-lg-3" style="margin-top:10px;">
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-twitter fa-2x"></i></a>
                     <a style="color:white; margin-left: 10px;" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
