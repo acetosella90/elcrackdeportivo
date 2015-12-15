@@ -51,5 +51,9 @@ class Noticia {
   {
     return $this->destacada;
   }
+
+  function getDescripcionAcortada($n){
+    return substr($this->descripcion,0,$n);
+  }
    
 }

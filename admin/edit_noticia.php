@@ -1,4 +1,5 @@
 <?php
+$title = "Editar Noticia";
 include_once('common/header.php');
 include_once('common/theme_color.php');
 $exito = false;
@@ -33,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     } else
         echo "El archivo supera el peso permitido.";
 
-    $db->updateNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'], $nombre, $_POST['categoria'], $_POST['id']);
+    $db->updateNoticia($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $_POST['destacada'], $nombre, $_POST['categoria'], $_POST['etiquetas'],$_POST['id']);
     $exito = true;
 }
 ?>
@@ -92,6 +93,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             </label>
                             <div class="col-md-10">
                                 <input type="text" value="<?php echo $datosNoticia['link'] ?>" class="form-control" name="link" id="form_control_1" >
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">Etiquetas (separadas por -)
+                            </label>
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" name="etiquetas" id="form_control_1" value="<?php echo $datosNoticia['etiquetas'] ?>">
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>

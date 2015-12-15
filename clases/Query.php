@@ -43,8 +43,9 @@ class Query {
         return $result;
     }
 
-    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria) {
-        $result = "INSERT INTO noticias(titulo,link,descripcion,destacada,imagen,categoria) VALUES ('$titulo', '$link', '$descripcion', '$destacada', '$imagen' ,'$categoria');";
+    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $etiquetas) {
+        $result = "INSERT INTO noticias(titulo,link,descripcion,destacada,imagen,categoria,etiquetas) VALUES ('$titulo', '$link', '$descripcion', '$destacada', '$imagen' ,'$categoria', '$etiquetas');";
+        echo "<script>alert('".$result."');</script>";
         return $result;
     }
 
@@ -69,8 +70,8 @@ class Query {
         return $result;
     }
     
-    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $id) {
-        $result = "UPDATE noticias SET titulo='$titulo', link='$link',descripcion='$descripcion', destacada='$destacada', categoria='$categoria',imagen='$imagen' WHERE id_noticia='$id';";
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria,$etiquetas, $id) {
+        $result = "UPDATE noticias SET titulo='$titulo', link='$link',descripcion='$descripcion', destacada='$destacada', etiquetas='$etiquetas',categoria='$categoria',imagen='$imagen' WHERE id_noticia='$id';";
         return $result;
     }
 

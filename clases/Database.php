@@ -8,7 +8,7 @@ class Database {
     public function __construct() {
         $this->host = "localhost";
         $this->username = "root";
-        $this->password = "";
+        $this->password = "1682951";
         $this->database = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)
@@ -74,10 +74,10 @@ class Database {
         return $this->query($query->getUserById($idUser));
     }
 
-    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria) {
+    public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria, $etiquetas) {
 
         $query = new Query();
-        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria));
+        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $etiquetas));
     }
 
     public function getAllNoticias() {
@@ -95,9 +95,9 @@ class Database {
         return $this->query($query->getNoticiaById($idNoticia));
     }
     
-    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria,$id) {
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria,$etiquetas,$id) {
         $query = new Query();
-        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $id));
+        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $etiquetas, $id));
     }
 
 

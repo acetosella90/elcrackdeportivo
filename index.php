@@ -17,7 +17,6 @@ while ($row = mysql_fetch_array($noticiasSQL)) {
     $noticia = new Noticia($row['id_noticia'], $row['imagen'], $row['link'], $row['descripcion'], $row['titulo'], $row['destacada']);
     array_push($noticias, $noticia);
 }
-
 //get all interviews
 
 $entrevistasSQL = $db->getAllEntrevistas();
@@ -39,7 +38,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
 
-        <title>Justified Nav Template for Bootstrap</title>
+        <title>Inicio - El Crack Deportivo</title>
 
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet">
@@ -77,16 +76,16 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
         <div class="row">
             <div class="col-lg-12 header">
                 <div class="col-lg-3"><img src="img/logo_elcrack.png"></div>
-                <div class="col-lg-3" style="margin-top: 15px;">
+                <div class="col-lg-3" style="margin-top: 15px; padding-left:50px;">
                     <p style="color:white;">Escuchanos en ¡VIVO!</p><hr>
                     <audio controls ><source src="http://angeladon.io/audio.mp3" type="audio/mpeg"></audio>
                 </div>
                 <div class="col-lg-3">
                 </div>
                 <div class="col-lg-3" style="margin-top:10px;">
-                    <a style="margin-left: 10px; color:white" onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-twitter fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
-                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="#"><i class="fa fa-youtube fa-2x"></i></a>
+                    <a style="margin-left: 10px; color:white" onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="https://twitter.com/crackdeportivo"><i class="fa fa-twitter fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="https://www.facebook.com/crackdeportivo/"><i class="fa fa-facebook-official fa-2x"></i></a>
+                    <a style="color:white; margin-left: 10px;"onMouseOver="this.style.cssText = 'color: #A8D6D9;margin-left: 10px;'" onMouseOut="this.style.cssText = 'color: white;margin-left: 10px;'" href="https://www.youtube.com/channel/UCRooEgy_ZOzl6_a21TCdr1w"><i class="fa fa-youtube fa-2x"></i></a>
                     <hr>
                     <div <?php if ($isMobile) echo "style='font-size: 12px;'"; ?>>
                         <?php
@@ -193,16 +192,14 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos_prueba/prueba1.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='admin/img/".$noticias[0]->getImagen()."' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos_prueba/prueba1.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='admin/img/".$noticias[0]->getImagen()."' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
                                     <div class="carousel-caption">
-                                        <h1>Example headline.</h1>
-
-
+                                        <h2><?php echo $noticias[0]->getTitulo(); ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -210,16 +207,14 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos_prueba/futbol2.jpg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='admin/img/".$noticias[1]->getImagen()."' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos_prueba/futbol2.jpg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='admin/img/".$noticias[1]->getImagen()."' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
                                     <div class="carousel-caption">
-                                        <h1>Example headline.</h1>
-
-
+                                        <h2><?php echo $noticias[1]->getTitulo(); ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -227,16 +222,14 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                                 <div class="container" style="height:100%; max-height:200px;">
                                     <?php
                                     if ($isMobile) {
-                                        echo "<img src='fotos_prueba/futbol.jpeg' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
+                                        echo "<img src='admin/img/".$noticias[2]->getImagen()."' alt='foto1'  height='400' style='margin-left:-15px;width:112%' >";
                                     } else {
-                                        echo "<img src='fotos_prueba/futbol.jpeg' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
+                                        echo "<img src='admin/img/".$noticias[2]->getImagen()."' alt='foto1' width='800' height='400' style='margin-left:-15px;'  >";
                                     }
                                     ?>
 
                                     <div class="carousel-caption">
-                                        <h1>Example headline.</h1>
-
-
+                                        <h2><?php echo $noticias[2]->getTitulo(); ?></h2>
                                     </div>
                                 </div>
                             </div>
@@ -256,35 +249,28 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 <div class="row">
                     <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
-                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            <img style="margin-top:10px;" src="admin/img/<?php echo $noticias[3]->getImagen(); ?>" alt="foto1" height="110" width="140" >
                         </div>
                         <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                            <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                            </p>
+                            
+                                <?php echo "<div style='display: table-cell; vertical-align: middle;'>".$noticias[3]->getDescripcionAcortada(220). "</div>"; ?>
+                            
                         </div>
                     </div>
                     <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
-                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            <img style="margin-top:10px;" src="admin/img/<?php echo $noticias[4]->getImagen(); ?>" alt="foto1" height="110" width="140" >
                         </div>
                         <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                            <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                            </p>
+                            <?php echo "<div style='display: table-cell; vertical-align: middle;'>".$noticias[4]->getDescripcionAcortada(220). "</div>"; ?>
                         </div>
                     </div>
                     <div class="col-lg-12 noticiaBanner" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                         <div class="col-lg-4" >
-                            <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            <img style="margin-top:10px;" src="admin/img/<?php echo $noticias[5]->getImagen(); ?>" alt="foto1" height="110" width="140" >
                         </div>
                         <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                            <p style="display: table-cell; vertical-align: middle;">
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                            </p>
+                            <?php echo "<div style='display: table-cell; vertical-align: middle;'>".$noticias[5]->getDescripcionAcortada(220). "</div>"; ?>
                         </div>
                     </div>  
                 </div>
@@ -303,37 +289,31 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[6]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo1</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[6]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[6]->getDescripcionAcortada(150); ?> .</p>
                         </div>
 
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[7]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo2</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[7]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[7]->getDescripcionAcortada(150); ?> .</p>
                         </div>
 
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[8]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo3</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[8]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[8]->getDescripcionAcortada(150); ?> .</p>
                         </div>
 
                     </div>
@@ -341,28 +321,28 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 </div>
                 <div class="row">
                     <div class="col-lg-8 noticiaSecundaria">
-                        <div class="col-lg-12" style="height:50%;">
+                        <div class="col-lg-12" style="height:50%; padding-bottom:10px;">
                             <div class="col-lg-4 offset1" style="height:100%">
-                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                                <img class="redondo" src="admin/img/<?php echo $noticias[9]->getImagen(); ?>" alt="foto1" height="160" width="160" >
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
 
                                 <p style="display: table-cell; vertical-align: middle;">
-                                <h4><strong>Titulo</strong></h4>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong><?php echo $noticias[9]->getTitulo(); ?></strong></h4>
+                                <?php echo $noticias[8]->getDescripcionAcortada(150); ?>
                                 </p>
                             </div>
                         </div>
                         <div class="col-lg-12" style="height:50%;">
-                            <div class="col-lg-4" style=" height:100%">
-                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                            <div class="col-lg-4 offset1" style="height:100%">
+                                <img class="redondo" src="admin/img/<?php echo $noticias[10]->getImagen(); ?>" alt="foto1" height="160" width="160" >
                             </div>
-                            <div class="col-lg-8" style=";height:100%; display: table; overflow: hidden;">
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+
                                 <p style="display: table-cell; vertical-align: middle;">
-                                <h4><strong>Titulo</strong></h4>
-                                Lorem dsasor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve</p>
+                                <h4><strong><?php echo $noticias[10]->getTitulo(); ?></strong></h4>
+                                <?php echo $noticias[10]->getDescripcionAcortada(150); ?>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -373,7 +353,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
+                    <div class="col-lg-4 noticiaPrincipal">
                         <div class="noticiasFotos">
                             <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
                         </div>
@@ -444,7 +424,148 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
 
                 </div>
                 <div class="row">
-                    <div class="col-lg-12 entrevistaPrincipal"></div>
+                    <div class="col-lg-12 entrevistaPrincipal">
+                        
+                        <div class="col-lg-12">
+                            <h4><strong>Titulo3 das das </strong></h4>
+                        </div>
+                        
+                        <div class="col-lg-4" style="height:390px; padding:10px; ">
+                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                        </div>
+                        <div class="col-lg-8" style="height:100%; margin-top:11px;">
+                            
+
+
+
+
+
+
+
+
+
+                    <div class="row">
+                    <div id="myCarousel2" class="carousel slide" data-ride="carousel2" style="margin-top:-10px;">
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                                <div class="container" style="height:100%; max-height:200px; padding:10px;">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item ">
+                                <div class="container" style="height:100%; max-height:200px; padding:10px;">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item">
+                                <div class="container" style="height:100%; max-height:200px; padding:10px;">
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                        <div class="col-lg-2">
+                                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                                            <center><h4>Titulo 2</h4></center>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+
+                        </div>
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
@@ -488,7 +609,9 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
             </div>
 
             <div class="col-lg-3 sideBar">
-                <div class="col-lg-12 radio"></div>
+                <div class="col-lg-12">
+                    <center><audio controls style="width:100%" ><source src="http://angeladon.io/audio.mp3" type="audio/mpeg"></audio></center>
+                </div>
                 <div class="col-lg-12 posiciones hidden"></div>
                 <div class="col-lg-12 imagen1SideBar">
                     <img src="fotos_prueba/tapa_ole.jpg" style="height:100%; width:100%">
@@ -513,20 +636,62 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
         <div class="row">
             <div class="col-lg-12 vine ">
                 <a href=""><img src="img/vine.jpg" style="height:100%;"></a>
+                
             </div>  
         </div>
         <div class="row">
             <div class="col-lg-12 galeriaVideos">
                 <div class="row">
-                    <div class="col-lg-7 galeriaVideo"></div>
-                    <div class="col-lg-5 galeriaVideoColumna"></div>
+                    <div class="col-lg-7 galeriaVideo" style="padding:30px;">
+                        <img src="fotos_prueba/tapa_ole.jpg" style="height:85%; width:100%">
+                        <h3 style="color:black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu</h3>
+                    </div>
+                    <div class="col-lg-5 galeriaVideoColumna">
+                        <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
+                            <div class="col-lg-4" >
+                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 galeriaVideoColumna">
+                        <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
+                            <div class="col-lg-4" >
+                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 galeriaVideoColumna">
+                        <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
+                            <div class="col-lg-4" >
+                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                            </div>
+                            <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
+                                <p style="display: table-cell; vertical-align: middle;">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- Site footer -->
 
         <div class="row">
-            <div class="col-lg-12 menuFooter">
+            <div class="col-lg-12 menuFooter hidden">
 
             </div>  
         </div>

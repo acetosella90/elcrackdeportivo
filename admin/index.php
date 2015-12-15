@@ -1,5 +1,5 @@
 <?php
-
+$title = "Inicio";
 session_start();
 if(!empty($_SESSION['id'])){
     echo "<script>window.location='dashboard.php';</script>";

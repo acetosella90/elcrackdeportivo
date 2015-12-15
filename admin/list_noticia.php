@@ -1,4 +1,5 @@
 <?php
+$title = "Listado de Noticias";
 include_once('common/header.php');
 include_once('common/theme_color.php');
 $noticias = $db->getAllNoticias();
@@ -78,6 +79,7 @@ $noticias = $db->getAllNoticias();
                                                 <th> Descripción </th>
                                                 <th> Link </th>
                                                 <th> ¿Destacada? </th>
+                                                <th> Etiquetas </th>
                                                 <th> Imagen </th>
                                                 <th> Editar </th>
                                                 <th> Eliminar </th>
@@ -90,9 +92,10 @@ $noticias = $db->getAllNoticias();
                                                 $adm = ($row['destacada'] == '1') ? "SI" : "NO";
                                                 echo "<tr class='odd gradeX'>";
                                                 echo "<td>".$row['titulo']."</td>";
-                                                echo "<td>".$row['descripcion']."</td>";
+                                                echo "<td>".substr($row['descripcion'],0,30)."</td>";
                                                 echo "<td>".$row['link']."</td>";
                                                 echo "<td>".$adm."</td>";
+                                                echo "<td>".$row['etiquetas']."</td>";
                                                 echo "<td><img height='50' src='img/".$row['imagen']."'></td>";
                                                 echo "<td><a href='edit_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-success'> Editar </span></a></td>";
                                                 echo "<td><a href='delete_noticia.php?id=".$row['id_noticia']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";

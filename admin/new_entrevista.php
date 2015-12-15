@@ -1,4 +1,5 @@
 <?php
+$title = "Nueva Entrevista";
 include_once('common/header.php');
 include_once('common/theme_color.php');
 $exito = false;

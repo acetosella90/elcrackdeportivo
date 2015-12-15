@@ -1,4 +1,5 @@
 <?php
+$title = "Listado de Usuarios";
 include_once('common/header.php');
 include_once('common/theme_color.php');
 $usuarios = $db->getAllUsers();
