@@ -6087,9 +6087,6 @@ button.close {
 }
 
 
-.sideBar{
-    height: 2180px;
-}
 
 .noticiaPrincipal{
     height: 350px;
@@ -6097,10 +6094,6 @@ button.close {
 
 .noticiaSecundaria{
     padding-top: 5px;
-}
-
-.princialPublicidad{
-    height: 350px;
 }
 
 .entrevistaPrincipal{
@@ -6187,4 +6180,15 @@ button.close {
     color: #E4CD27 !important;
     padding: 3px;
     max-width: 110px;
+}
+
+
+.bannerTitulo{
+    background-color:red;
+    height: 140px;
+}
+
+.imagenTitulo{
+    background-color:yellow;
+    height: 300px;
 }
