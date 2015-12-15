@@ -32,6 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $exito = true;
 }
 ?>
+  <script src="tinymce.min.js"></script>
+  <script>tinymce.init({ selector:'textarea' });</script>
 <!-- BEGIN PAGE BAR -->
 <div class="page-bar">
     <ul class="page-breadcrumb">

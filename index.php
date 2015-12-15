@@ -22,7 +22,7 @@ while ($row = mysql_fetch_array($noticiasSQL)) {
 $entrevistasSQL = $db->getAllEntrevistas();
 $entrevistas = array();
 while ($row = mysql_fetch_array($entrevistasSQL)) {
-    $entrevista = new Entrevista($row['id'], $row['link'], $row['descripcion'], $row['titulo']);
+    $entrevista = new Entrevista($row['id'], $row['link'], $row['descripcion'], $row['titulo'], $row['imagen']);
     array_push($entrevistas, $entrevista);
 }
 include_once('common/header.php');
@@ -270,115 +270,111 @@ include_once('common/header.php');
                 </div>
                 <div class="row">
                     <div class="col-lg-12 entrevistaPrincipal">
-                        
                         <div class="col-lg-12">
                             <h4><strong>Titulo3 das das </strong></h4>
                         </div>
-                        
                         <div class="col-lg-4" style="height:390px; padding:10px; ">
-
-                            <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                            <img src="admin/img/<?php echo $entrevistas[0]->getImagen(); ?>" alt="publicidad" style="height:100%; width:100%; " />
                         </div>
                         <div class="col-lg-8" style="height:100%; margin-top:11px;">
                             <div class="row">
                             <div id="myCarousel2" class="carousel slide" data-ride="carousel2" style="margin-top:-10px;">
                                 <div class="carousel-inner" role="listbox">
+                                    <?php if(count($entrevistas) > 1){ ?>
                                     <div class="item active">
                                         <div class="container" style="height:100%; max-height:200px; padding:10px;">
                                             <div class="row">
+                                            <?php  if(count($entrevistas) > 1){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[1]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[1]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 2){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[2]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[2]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                 <?php  if(count($entrevistas) > 3){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[3]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[3]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
                                             </div>
                                             <div class="row">
+                                                <?php  
+                                                if(count($entrevistas) > 4){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[4]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[4]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 5){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[5]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[5]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 6){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[6]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[6]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
+                                    <?php } ?>
+                                    <?php if(count($entrevistas) > 7){ ?>
                                     <div class="item ">
                                         <div class="container" style="height:100%; max-height:200px; padding:10px;">
                                             <div class="row">
+                                                <?php  
+                                                if(count($entrevistas) > 7){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[7]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[7]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 8){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[8]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[8]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 9){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[9]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[9]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
                                             </div>
                                             <div class="row">
+                                                <?php  
+                                                if(count($entrevistas) > 10){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[10]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[10]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 11){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[11]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[11]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
+                                                <?php  if(count($entrevistas) > 12){ ?>
                                                 <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
+                                                    <img src="admin/img/<?php echo $entrevistas[12]->getImagen(); ?>" alt="publicidad" style="height:130px; width:100%; " />
+                                                    <center><h4><?php echo $entrevistas[12]->getTitulo(); ?></h4></center>
                                                 </div>
+                                                <?php } ?>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="item">
-                                        <div class="container" style="height:100%; max-height:200px; padding:10px;">
-                                            <div class="row">
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                                <div class="col-lg-2">
-                                                    <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
-                                                    <center><h4>Titulo 2</h4></center>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    <?php  } ?>
                                 </div>
                                 <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
                                     <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>

@@ -9,12 +9,13 @@ class Entrevista {
    var $titulo;
 
 
-   function Entrevista($id, $link, $descripcion, $titulo) 
+   function Entrevista($id, $link, $descripcion, $titulo, $imagen) 
    {
           $this->id=$id;
           $this->link=$link;
           $this->descripcion=$descripcion;
           $this->titulo=$titulo;
+          $this->imagen = $imagen;
    }
 
    function getId() 
@@ -36,5 +37,10 @@ class Entrevista {
     function getTitulo() 
     {
     return $this->titulo;
+    }  
+
+    function getImagen() 
+    {
+    return $this->imagen;
     }  
 }
