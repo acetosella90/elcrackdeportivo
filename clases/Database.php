@@ -8,7 +8,7 @@ class Database {
     public function __construct() {
         $this->host = "localhost";
         $this->username = "root";
-        $this->password = "1682951";
+        $this->password = "root";
         $this->database = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)
@@ -144,6 +144,10 @@ class Database {
     public function getAllCategorias(){
         $query = new Query();
         return $this->query($query->getAllCategorias());
+    }
+    public function addPublicidadTapa(){
+        $query = new Query();
+        return $this->query($query->addPublicidadTapa());
     }
 
 }

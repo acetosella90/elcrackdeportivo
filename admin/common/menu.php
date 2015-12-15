@@ -97,7 +97,8 @@
                                 </li> 
                             </ul>
                         </li>
-
+<!--*****************************************END  ENTREVISTAS -------------------------------------------------------------------->
+<!--*****************************************   PUBLICIDAD   -------------------------------------------------------------------->
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="fa fa-newspaper-o"></i>
@@ -106,33 +107,15 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="primer_publicidad.php" class="nav-link ">
+                                    <a href="publicidad_tapa.php" class="nav-link ">
                                         <i class="fa fa-newspaper-o"></i>
-                                        <span class="title">1er Publicidad</span>
+                                        <span class="title">Agregar/Editar</span>
                                     </a>
                                 </li>
-                                <li class="nav-item  ">
-                                    <a href="segunda_publicidad.php" class="nav-link ">
-                                        <i class="fa fa-newspaper-o"></i>
-                                        <span class="title">2da Publicidad</span>
-                                    </a>
-                                </li> 
-                                <li class="nav-item  ">
-                                    <a href="primera_side.php" class="nav-link ">
-                                        <i class="fa fa-newspaper-o"></i>
-                                        <span class="title">1ra Imagen Columna</span>
-                                    </a>
-                                </li> 
-                                <li class="nav-item">
-                                    <a href="segunda_side.php" class="nav-link ">
-                                        <i class="fa fa-newspaper-o"></i>
-                                        <span class="title">2da Imagen Columna</span>
-                                    </a>
-                                </li> 
                             </ul>
                         </li>
                     </ul>
-<!--*****************************************END  ENTREVISTAS -------------------------------------------------------------------->
+<!--*****************************************END  PUBLICIDAD -------------------------------------------------------------------->
                     <!-- END SIDEBAR MENU -->
                     <!-- END SIDEBAR MENU -->
                 </div>

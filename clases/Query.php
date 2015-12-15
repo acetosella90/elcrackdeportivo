@@ -116,5 +116,9 @@ class Query {
         $result = "SELECT * FROM categoria;";
         return $result;
     }
+    public function addPublicidadTapa() {
+        $result = "SELECT * FROM categoria;";
+        return $result;
+    }
 
 }
