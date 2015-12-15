@@ -77,7 +77,7 @@ class Database {
     public function addNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria, $etiquetas) {
 
         $query = new Query();
-        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $etiquetas));
+        return $this->query($query->addNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria, $etiquetas));
     }
 
     public function getAllNoticias() {
@@ -94,60 +94,70 @@ class Database {
         $query = new Query();
         return $this->query($query->getNoticiaById($idNoticia));
     }
-    
-    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria,$etiquetas,$id) {
+
+    public function updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria, $etiquetas, $id) {
         $query = new Query();
-        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen,$categoria, $etiquetas, $id));
+        $this->query($query->updateNoticia($titulo, $link, $descripcion, $destacada, $imagen, $categoria, $etiquetas, $id));
     }
 
-
-    public function addEntrevista($titulo, $link, $descripcion, $nombre){
+    public function addEntrevista($titulo, $link, $descripcion, $nombre) {
         $query = new Query();
         $this->query($query->addEntrevista($titulo, $link, $descripcion, $nombre));
     }
 
-    public function getAllEntrevistas(){
+    public function getAllEntrevistas() {
         $query = new Query();
         return $this->query($query->getAllEntrevistas());
     }
 
-    public function deleteEntrevista($id){
+    public function deleteEntrevista($id) {
         $query = new Query();
         $this->query($query->deleteEntrevista($id));
     }
 
-    public function getEntrevistaById($id){
+    public function getEntrevistaById($id) {
         $query = new Query();
         return $this->query($query->getEntrevistaById($id));
     }
 
-    public function updateEntrevista($titulo, $link, $descripcion,$id){
+    public function updateEntrevista($titulo, $link, $descripcion, $id) {
         $query = new Query();
-        $this->query($query->updateEntrevista($titulo, $link, $descripcion,$id));
+        $this->query($query->updateEntrevista($titulo, $link, $descripcion, $id));
     }
 
-    public function getCantUsers(){
+    public function getCantUsers() {
         $query = new Query();
         return $this->query($query->getCantUsers());
     }
 
-    public function getCantNoticias(){
+    public function getCantNoticias() {
         $query = new Query();
         return $this->query($query->getCantNoticias());
     }
 
-    public function getCantEntrevistas(){
+    public function getCantEntrevistas() {
         $query = new Query();
         return $this->query($query->getCantEntrevistas());
     }
 
-    public function getAllCategorias(){
+    public function getCantPublicidadTapas() {
         $query = new Query();
-        return $this->query($query->getAllCategorias());
+        return $this->query($query->getCantPublicidadTapas());
     }
-    public function addPublicidadTapa(){
+
+    public function updatePublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2) {
         $query = new Query();
-        return $this->query($query->addPublicidadTapa());
+        return $this->query($query->updatePublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2));
+    }
+
+    public function addPublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2) {
+
+        $query = new Query();
+
+        if ($this->query($query->getCantPublicidadTapas()))
+            $this->query($query->addPublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2));
+
+        return $this->query($query->updatePublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2));
     }
 
 }

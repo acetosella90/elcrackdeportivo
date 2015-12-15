@@ -20,9 +20,10 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         $tamaño_max = "50000000000";
         if ($tamano < $tamaño_max) {
             $destino = 'img';
+            echo  "ACA === " . $_FILES["publicidad1"]["type"];
             $sep = explode('image/', $_FILES["publicidad1"]["type"]);
             $tipo = $sep[1];
-            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg") {
+            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg" || $tipo == "png") {
                 $a = move_uploaded_file($_FILES ['publicidad1']['tmp_name'], $destino . '/' . $cad . '.' . $tipo);
                 $publicidad1 = $cad . '.' . $tipo;
             } else
@@ -47,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $destino = 'img';
             $sep = explode('image/', $_FILES["publicidad2"]["type"]);
             $tipo = $sep[1];
-            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg") {
+            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg"|| $tipo == "png") {
                 $a = move_uploaded_file($_FILES ['publicidad2']['tmp_name'], $destino . '/' . $cad . '.' . $tipo);
                 $publicidad2 = $cad . '.' . $tipo;
             } else
@@ -72,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $destino = 'img';
             $sep = explode('image/', $_FILES["tapa1"]["type"]);
             $tipo = $sep[1];
-            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg") {
+            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg"|| $tipo == "png") {
                 $a = move_uploaded_file($_FILES ['tapa1']['tmp_name'], $destino . '/' . $cad . '.' . $tipo);
                 $tapa1 = $cad . '.' . $tipo;
             } else
@@ -97,7 +98,7 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
             $destino = 'img';
             $sep = explode('image/', $_FILES["tapa2"]["type"]);
             $tipo = $sep[1];
-            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg") {
+            if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg"|| $tipo == "png") {
                 $a = move_uploaded_file($_FILES ['tapa2']['tmp_name'], $destino . '/' . $cad . '.' . $tipo);
                 $tapa2 = $cad . '.' . $tipo;
             } else
