@@ -50,7 +50,7 @@ class Query {
     }
 
     public function getAllNoticias() {
-        $result = "SELECT * FROM noticias;";
+        $result = "SELECT * FROM noticias order by id_noticia DESC;";
         return $result;
     }
 

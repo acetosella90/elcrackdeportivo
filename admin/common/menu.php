@@ -97,6 +97,40 @@
                                 </li> 
                             </ul>
                         </li>
+
+                        <li class="nav-item  ">
+                            <a href="javascript:;" class="nav-link nav-toggle">
+                                <i class="fa fa-newspaper-o"></i>
+                                <span class="title">Publicidad/Tapas</span>
+                                <span class="arrow"></span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li class="nav-item  ">
+                                    <a href="primer_publicidad.php" class="nav-link ">
+                                        <i class="fa fa-newspaper-o"></i>
+                                        <span class="title">1er Publicidad</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item  ">
+                                    <a href="segunda_publicidad.php" class="nav-link ">
+                                        <i class="fa fa-newspaper-o"></i>
+                                        <span class="title">2da Publicidad</span>
+                                    </a>
+                                </li> 
+                                <li class="nav-item  ">
+                                    <a href="primera_side.php" class="nav-link ">
+                                        <i class="fa fa-newspaper-o"></i>
+                                        <span class="title">1ra Imagen Columna</span>
+                                    </a>
+                                </li> 
+                                <li class="nav-item">
+                                    <a href="segunda_side.php" class="nav-link ">
+                                        <i class="fa fa-newspaper-o"></i>
+                                        <span class="title">2da Imagen Columna</span>
+                                    </a>
+                                </li> 
+                            </ul>
+                        </li>
                     </ul>
 <!--*****************************************END  ENTREVISTAS -------------------------------------------------------------------->
                     <!-- END SIDEBAR MENU -->

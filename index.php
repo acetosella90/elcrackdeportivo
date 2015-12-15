@@ -355,37 +355,31 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[11]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo1</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[11]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[11]->getDescripcionAcortada(200); ?></p>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
+                    <div class="col-lg-4 noticiaPrincipal">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[12]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo2</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[12]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[12]->getDescripcionAcortada(200); ?></p>
                         </div>
 
                     </div>
-                    <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
+                   <div class="col-lg-4 noticiaPrincipal">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[13]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo3</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[13]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[13]->getDescripcionAcortada(200); ?></p>
                         </div>
 
                     </div>
@@ -393,27 +387,25 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 </div>
                 <div class="row">
                     <div class="col-lg-8 noticiaSecundaria">
-                        <div class="col-lg-12" style="height:50%;">
+                        <div class="col-lg-12" style="height:50%; padding-bottom:10px;">
                             <div class="col-lg-4 offset1" style="height:100%">
-                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                                <img class="redondo" src="admin/img/<?php echo $noticias[14]->getImagen(); ?>" alt="foto1" height="160" width="160" >
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                <h4><strong>Titulo</strong></h4>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong><?php echo $noticias[14]->getTitulo(); ?></strong></h4>
+                                <?php echo $noticias[14]->getDescripcionAcortada(200); ?>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-lg-12" style="height:50%;">
+                        <div class="col-lg-12" style="height:50%; padding-bottom:10px;">
                             <div class="col-lg-4 offset1" style="height:100%">
-                                <img class="redondo" src="fotos_prueba/prueba1.jpg" alt="foto1" height="160" width="160" >
+                                <img class="redondo" src="admin/img/<?php echo $noticias[15]->getImagen(); ?>" alt="foto1" height="160" width="160" >
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
                                 <p style="display: table-cell; vertical-align: middle;">
-                                <h4><strong>Titulo</strong></h4>
-                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
+                                <h4><strong><?php echo $noticias[15]->getTitulo(); ?></strong></h4>
+                                <?php echo $noticias[15]->getDescripcionAcortada(200); ?>
                                 </p>
                             </div>
                         </div>
@@ -431,6 +423,7 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                         </div>
                         
                         <div class="col-lg-4" style="height:390px; padding:10px; ">
+                        
                             <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
                         </div>
                         <div class="col-lg-8" style="height:100%; margin-top:11px;">
@@ -570,37 +563,31 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
                 <div class="row">
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[16]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo1</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[16]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[16]->getDescripcionAcortada(200); ?> .</p>
                         </div>
 
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[17]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo2</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[17]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[17]->getDescripcionAcortada(200); ?> .</p>
                         </div>
 
                     </div>
                     <div class="col-lg-4 noticiaPrincipal" style="background-color:white;">
                         <div class="noticiasFotos">
-                            <img src="fotos_prueba/prueba1.jpg" alt="foto1" height="200" width="330" >
+                            <img src="admin/img/<?php echo $noticias[18]->getImagen(); ?>" alt="foto1" height="200" width="330" >
                         </div>
                         <div>
-                            <h4><strong>Titulo3</strong></h4>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut volutpat quis purus nec sodales. 
-                                Sed at ultricies nunc. Curabitur et nisi quis diam laoreet tincidunt. 
-                                Sed fermentum egestas risus quis pulvinar.  .</p>
+                            <h4><strong><?php echo $noticias[18]->getTitulo(); ?></strong></h4>
+                            <p><?php echo $noticias[18]->getDescripcionAcortada(200); ?> .</p>
                         </div>
 
                     </div>
