@@ -8,7 +8,7 @@ class Database {
     public function __construct() {
         $this->host = "localhost";
         $this->username = "root";
-        $this->password = "root";
+        $this->password = "1682951";
         $this->database = "elcrackdeportivo";
 
         $this->link = mysql_connect($this->host, $this->username, $this->password)
@@ -158,6 +158,16 @@ class Database {
             $this->query($query->addPublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2));
 
         return $this->query($query->updatePublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2));
+    }
+
+    public function getPublidadesTapas(){
+        $query = new Query();
+        return $this->query($query->getPublicidadesTapas());
+    }
+
+    public function getNoticiasWithVideo(){
+        $query = new Query();
+        return $this->query($query->getNoticiasWithVideo());
     }
 
 }

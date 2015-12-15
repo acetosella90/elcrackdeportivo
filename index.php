@@ -26,6 +26,15 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
     array_push($entrevistas, $entrevista);
 }
 
+$publicidadesTapas = mysql_fetch_array($db->getPublidadesTapas());
+
+
+$noticiasVideos = array();
+foreach ($noticias as $noti ) {
+    if(!empty($noti->getLink())){
+        array_push($noticiasVideos, $noti);
+    }
+}
 
 include_once('common/header.php');
 ?>
@@ -204,7 +213,7 @@ include_once('common/header.php');
                         </div>
                     </div>
                     <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                        <img src="fotos_prueba/cocacola-amaia-arrazola247.jpg" alt="publicidad" style='height: 100%; width: 100%;'/>
+                        <img src="admin/img/<?php echo $publicidadesTapas['publicidad1']; ?>" alt="publicidad" style='height: 100%; width: 100%;'/>
                     </div>
                 </div>
                 <div class="row">
@@ -266,7 +275,7 @@ include_once('common/header.php');
                         </div>
                     </div>
                     <div class="col-lg-4 princialPublicidad" style="background-color:white;">
-                        <img src="fotos_prueba/garba.jpg" alt="publicidad" style="height:100%; width:100%; " />
+                        <img src="admin/img/<?php echo $publicidadesTapas['publicidad2']; ?>" alt="publicidad" style="height:100%; width:100%; " />
                     </div>
 
                 </div>
@@ -433,7 +442,7 @@ include_once('common/header.php');
                 </div>
                 <div class="col-lg-12 posiciones hidden"></div>
                 <div class="col-lg-12 imagen1SideBar">
-                    <img src="fotos_prueba/tapa_ole.jpg" style="height:100%; width:100%">
+                    <img src="admin/img/<?php echo $publicidadesTapas['img_col1']; ?>" style="height:100%; width:100%">
                 </div>
                 <div class="col-lg-12 imagen1SideBar">
                     <a class="twitter-timeline"  href="https://twitter.com/OrbitDesarrollo" data-widget-id="675907943297105921">Tweets por el @OrbitDesarrollo.</a>
@@ -449,7 +458,7 @@ include_once('common/header.php');
                 </div>
                 <div class="col-lg-12 imagen1SideBar">
                     <div class="fb-page" data-href="https://www.facebook.com/Orbit-1035903329793773/" data-width="362" data-height="340" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/Orbit-1035903329793773/"><a href="https://www.facebook.com/Orbit-1035903329793773/">Orbit</a></blockquote></div></div></div>
-                    <div class="col-lg-12 imagen2SideBar"><img src="fotos_prueba/tapa_ole.jpg" style="height:100%; width:100%"></div>
+                    <div class="col-lg-12 imagen2SideBar"><img src="admin/img/<?php echo $publicidadesTapas['img_col2']; ?>" style="height:100%; width:100%"></div>
                 </div>
             </div>
         <div class="row">
@@ -459,48 +468,45 @@ include_once('common/header.php');
             </div>  
         </div>
         <div class="row">
-            <div class="col-lg-12 galeriaVideos">
-                <div class="row">
+            <div class="col-lg-12 galeriaVideos" >
+                <div class="row" style="height: 450px;">
                     <div class="col-lg-7 galeriaVideo" style="padding:30px;">
-                        <img src="fotos_prueba/tapa_ole.jpg" style="height:85%; width:100%">
-                        <h3 style="color:black">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiu</h3>
+                    <iframe class="youtube-player" type="text/html" style="height:85%; width:100%" src="<?php echo $noticiasVideos[0]->getLink(); ?>" frameborder="0"></iframe>
+                        <h3 style="color:black"><?php echo $noticiasVideos[0]->getTitulo(); ?></h3>
                     </div>
                     <div class="col-lg-5 galeriaVideoColumna">
                         <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                             <div class="col-lg-4" >
-                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                                <iframe class="youtube-player" style="margin-top:10px;" type="text/html" height="110" width="140" src="<?php echo $noticiasVideos[1]->getLink(); ?>" frameborder="0"></iframe>
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                                <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                                </p>
+                                <div style="display: table-cell; vertical-align: middle;">
+                                    <?php echo $noticiasVideos[1]->getDescripcionAcortada(160); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 galeriaVideoColumna">
                         <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                             <div class="col-lg-4" >
-                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                                <iframe class="youtube-player" style="margin-top:10px;" type="text/html" height="110" width="140" src="<?php echo $noticiasVideos[2]->getLink(); ?>" frameborder="0"></iframe>
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                                <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                                </p>
+                                <div style="display: table-cell; vertical-align: middle;">
+                                    <?php echo $noticiasVideos[2]->getDescripcionAcortada(160); ?>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-5 galeriaVideoColumna">
                         <div class="col-lg-12" <?php if (!$isMobile) echo "style='height:130px;'"; ?>>
                             <div class="col-lg-4" >
-                                <img style="margin-top:10px;" src="fotos_prueba/prueba1.jpg" alt="foto1" height="110" width="140" >
+                                <iframe class="youtube-player" style="margin-top:10px;" type="text/html" height="110" width="140" src="<?php echo $noticiasVideos[3]->getLink(); ?>" frameborder="0"></iframe>
                             </div>
                             <div class="col-lg-8" style="height:100%;display: table; overflow: hidden;">
-                                <p style="display: table-cell; vertical-align: middle;">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ven
-                                </p>
+                                <div style="display: table-cell; vertical-align: middle;">
+                                    <?php echo $noticiasVideos[3]->getDescripcionAcortada(160); ?>
+                                </div>
                             </div>
                         </div>
                     </div>

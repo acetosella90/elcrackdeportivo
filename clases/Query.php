@@ -130,9 +130,6 @@ class Query {
     }
     
     public function updatePublicidadTapa($publicidad1, $publicidad2, $tapa1, $tapa2) {
-        
-        
-    
         if($publicidad1){
             $p[] = "publicidad1='$publicidad1' ";
         }
@@ -154,14 +151,18 @@ class Query {
             
             $update .= $p[$i]. ",";
         }
-        var_dump($p);
-        
         $update = substr($update, 0, -1);
-        
-        
         $result = "UPDATE publicidades_tapas SET $update WHERE id='1';";
-        var_dump($result);
         return $result;
     }
 
+    public function getPublicidadesTapas(){
+        $result = "SELECT * from publicidades_tapas;";
+        return $result;
+    }
+
+    public function getNoticiasWithVideo(){
+        $result = "SELECT link, titulo FROM noticias WHERE link is not null AND TRIM(link) <> ''";
+        return $result;
+    }
 }
