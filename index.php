@@ -272,9 +272,10 @@ include_once('common/header.php');
                 </div>
                 <div class="row">
                     <div class="col-lg-12 entrevistaPrincipal">
-                        <div class="col-lg-12">
-                            <h4><strong>Titulo3 das das </strong></h4>
+                        <div class="col-lg-5" style="background: #E4CD27; margin-top: 10px;display: table; overflow: hidden;">
+                            <h4 style="color: #1099A4;margin-top: 15px;"><strong>ENTREVISTAS</strong><p style="float:right; font-size: 35px; font: oblique 160% sans-serif bold; margin-top: -10px;">Crack Radio</p></h4>
                         </div>
+                         <div style="clear: both; height: 0px;" ><!-- clear --></div>
                         <div class="col-lg-4" style="height:390px; padding:10px; ">
                             <img src="admin/img/<?php echo $entrevistas[0]->getImagen(); ?>" alt="publicidad" style="height:100%; width:100%; " />
                         </div>
