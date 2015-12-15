@@ -75,8 +75,8 @@ class Query {
         return $result;
     }
 
-    public function addEntrevista($titulo, $link, $descripcion){
-        $result = "INSERT INTO entrevistas(titulo,link,descripcion) VALUES ('$titulo','$link','$descripcion');";
+    public function addEntrevista($titulo, $link, $descripcion, $nombre){
+        $result = "INSERT INTO entrevistas(titulo,link,descripcion, imagen) VALUES ('$titulo','$link','$descripcion', '$nombre');";
         return $result;
     }
 

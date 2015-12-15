@@ -101,9 +101,9 @@ class Database {
     }
 
 
-    public function addEntrevista($titulo, $link, $descripcion){
+    public function addEntrevista($titulo, $link, $descripcion, $nombre){
         $query = new Query();
-        $this->query($query->addEntrevista($titulo, $link, $descripcion));
+        $this->query($query->addEntrevista($titulo, $link, $descripcion, $nombre));
     }
 
     public function getAllEntrevistas(){

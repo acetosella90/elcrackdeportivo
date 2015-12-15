@@ -7,7 +7,28 @@ if (empty($_SESSION['id'])) {
     echo "<script>window.location='../index.php';</script>";
 }
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
-    $db->addEntrevista($_POST['titulo'], $_POST['link'], $_POST['descripcion']);
+     $str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
+    $cad = "";
+    for ($i = 0; $i < 12; $i++) {
+        $cad .= substr($str, rand(0, 62), 1);
+    }
+
+    $tamano = $_FILES ['imagen']['size'];
+    $tamaño_max = "50000000000";
+    if ($tamano < $tamaño_max) {
+        $destino = 'img';
+        $sep = explode('image/', $_FILES["imagen"]["type"]);
+        $tipo = $sep[1];
+        if ($tipo == "gif" || $tipo == "jpeg" || $tipo == "bmp" || $tipo == "jpg") {
+            $a = move_uploaded_file($_FILES ['imagen']['tmp_name'], $destino . '/' . $cad . '.' . $tipo);
+            $nombre = $cad . '.' . $tipo;
+        } else
+            echo "El tipo de archivo no es de los permitidos";
+    } else
+        echo "El archivo supera el peso permitido.";
+
+    
+    $db->addEntrevista($_POST['titulo'], $_POST['link'], $_POST['descripcion'], $nombre);
     $exito = true;
 }
 ?>
@@ -55,6 +76,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
                             </label>
                             <div class="col-md-10">
                                 <input type="text" class="form-control" name="link" id="form_control_1" placeholder="Ingresar Link">
+                                <div class="form-control-focus"> </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group form-md-line-input">
+                            <label class="col-md-2 control-label" for="form_control_1">Imagen 
+                            </label>
+                            <div class="col-md-10">
+                                <input type="file"   class="form-control" name="imagen" id="form_control_1" >
                                 <div class="form-control-focus"> </div>
                             </div>
                         </div>

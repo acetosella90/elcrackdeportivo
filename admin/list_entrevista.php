@@ -51,6 +51,7 @@ $entrevistas = $db->getAllEntrevistas();
                                                 <th> Titulo </th>
                                                 <th> Descripción </th>
                                                 <th> Link </th>
+                                                <th> Imagen </th>
                                                 <th> Editar </th>
                                                 <th> Eliminar </th>
                                             </tr>
@@ -63,6 +64,7 @@ $entrevistas = $db->getAllEntrevistas();
                                                 echo "<td>".$row['titulo']."</td>";
                                                 echo "<td>".$row['descripcion']."</td>";
                                                 echo "<td>".$row['link']."</td>";
+                                                echo "<td><img src='img/".$row['imagen']."' height=100></img></td>";
                                                 echo "<td><a href='edit_entrevista.php?id=".$row['id']."'><span class='label label-sm label-success'> Editar </span></a></td>";
                                                 echo "<td><a href='delete_entrevista.php?id=".$row['id']."'><span class='label label-sm label-warning'> Eliminar </span></a></td>";
                                             } ?>
