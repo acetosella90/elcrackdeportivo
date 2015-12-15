@@ -25,6 +25,8 @@ while ($row = mysql_fetch_array($entrevistasSQL)) {
     $entrevista = new Entrevista($row['id'], $row['link'], $row['descripcion'], $row['titulo'], $row['imagen']);
     array_push($entrevistas, $entrevista);
 }
+
+
 include_once('common/header.php');
 ?>
 
